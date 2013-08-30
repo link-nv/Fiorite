@@ -1,7 +1,11 @@
-# Xcode
+# OS-Specific junk.
 .DS_Store
+
+# Pods
 Pods/
 Podfile.lock
+
+# XCode 
 build/
 *.pbxuser
 !default.pbxuser
