@@ -19,13 +19,12 @@
 #import "PearlWSController.h"
 #import "NSDictionary_JSONExtensions.h"
 #import "NSString+PearlNSArrayFormat.h"
-#ifdef PEARL_UIKIT
 #import "PearlAlert.h"
-#endif
 #import "PearlLogger.h"
 #import "PearlStringUtils.h"
 #import "CJSONSerializer.h"
 #import "NSObject+PearlExport.h"
+#import <AFHTTPClient.h>
 
 #define JSON_NON_EXECUTABLE_PREFIX      @")]}'\n"
 
@@ -101,114 +100,81 @@
                                completion:(void (^)(NSData *responseData, NSError *connectionError))completion {
     
     trc(@"Out to %@, method: %d:\n%@", [self serverURL], method, parameters);
+    
+    switch (method) {
+        case PearlWSRequestMethodGET_REST: {
+
+            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
+
+            NSMutableString *urlString = [[self.serverURL absoluteString] mutableCopy];
+            BOOL hasQuery = [urlString rangeOfString:@"?"].location != NSNotFound;
+
+            for (NSString *key in [parameters allKeys]) {
+                id value = [parameters objectForKey:key];
+                if (value != [NSNull null]) {
+                    [urlString appendFormat:@"%s%@=%@", hasQuery? "&": "?",
+                     [key encodeURL], [[value description] encodeURL]];
+                    hasQuery = YES;
+                }
+            }
+            [urlString appendFormat:@"%s%@=%@", hasQuery? "&": "?",
+             [REQUEST_KEY_VERSION encodeURL],
+             [[PearlConfig get].build encodeURL]];
+            
+            [httpClient getPath:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+                completion(responseObject, nil);
+
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+                completion(nil, error);
+            }];
+
+            break;
+        }
+        case PearlWSRequestMethodPOST_REST: {
+
+            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
+            
+            NSMutableDictionary *postParameters = [[NSMutableDictionary alloc] initWithCapacity:parameters.count + 1];
+            for( NSString *key in [parameters allKeys]) {
+                id value = [parameters objectForKey:key];
+                [postParameters setObject:value forKey:key];
+            }
+            [postParameters setObject:[PearlConfig get].build forKey:REQUEST_KEY_VERSION];
+            
+            [httpClient postPath:nil parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+                completion(responseObject, nil);
+
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+                completion(nil, error);
+                
+            }];
+            
+            break;
+        }
+        case PearlWSRequestMethodPOST_JSON: {
+            
+            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
+            [httpClient setParameterEncoding:AFJSONParameterEncoding];
+            
+            [httpClient postPath:nil parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+                completion(responseObject, nil);
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                
+                completion(nil, error);
+                
+            }];
+            
+            break;
+        }
+    }
+    
     return nil;
-//    ASIHTTPRequest *request = nil;
-//    NSData *(^loadRequest)(void) = nil;
-//    
-//    switch (method) {
-//        case PearlWSRequestMethodGET_REST: {
-//            ASIFormDataRequest *formRequest = [[ASIFormDataRequest alloc] initWithURL:[self serverURL]];
-//            request = formRequest;
-//            
-//            NSMutableString *urlString = [[[self serverURL] absoluteString] mutableCopy];
-//            BOOL hasQuery = [urlString rangeOfString:@"?"].location != NSNotFound;
-//            
-//            for (NSString *key in [parameters allKeys]) {
-//                id value = [parameters objectForKey:key];
-//                if (value != [NSNull null]) {
-//                    [urlString appendFormat:@"%s%@=%@", hasQuery? "&": "?",
-//                     [formRequest encodeURL:key],
-//                     [formRequest encodeURL:[value description]]];
-//                    hasQuery = YES;
-//                }
-//            }
-//            [urlString appendFormat:@"%s%@=%@", hasQuery? "&": "?",
-//             [formRequest encodeURL:REQUEST_KEY_VERSION],
-//             [formRequest encodeURL:[PearlConfig get].build]];
-//            
-//            loadRequest = [^{
-//                NSError       *error        = nil;
-//                NSURLResponse *response     = nil;
-//                NSData        *responseData = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]
-//                                                                    returningResponse:&response error:&error];
-//                request.error = error;
-//                
-//                return responseData;
-//            } copy];
-//            break;
-//        }
-//            
-//        case PearlWSRequestMethodPOST_REST: {
-//            // Build the request.
-//            ASIFormDataRequest *formRequest = [[ASIFormDataRequest alloc] initWithURL:[self serverURL]];
-//            request = formRequest;
-//            
-//            [formRequest setPostFormat:ASIURLEncodedPostFormat];
-//            [formRequest setDelegate:self];
-//            for (NSString *key in [parameters allKeys]) {
-//                id value = [parameters objectForKey:key];
-//                if (value != [NSNull null])
-//                    [formRequest setPostValue:[value description] forKey:key];
-//            }
-//            [formRequest setPostValue:[PearlConfig get].build forKey:REQUEST_KEY_VERSION];
-//            
-//            loadRequest = [^{
-//                [request startSynchronous];
-//                
-//                return request.responseData;
-//            } copy];
-//            break;
-//        }
-//            
-//        case PearlWSRequestMethodPOST_JSON: {
-//            // Build the request.
-//            request = [[ASIHTTPRequest alloc] initWithURL:[self serverURL]];
-//            
-//            NSError *jsonError = nil;
-//            [request setPostBody:[[[CJSONSerializer serializer] serializeDictionary:parameters error:&jsonError] mutableCopy]];
-//            if (jsonError != nil) {
-//                err(@"JSON: %@, for request:\n%@", jsonError, request.url);
-//                return nil;
-//            }
-//            
-//            loadRequest = [^{
-//                [request startSynchronous];
-//                
-//                return request.responseData;
-//            } copy];
-//            break;
-//        }
-//    }
-//    
-//    dispatch_block_t handleRequest = [^{
-//        NSData *responseData = loadRequest();
-//        if ([request isCancelled]) {
-//            dbg(@"Cancelled: %@", request.url);
-//            completion(nil, nil);
-//        }
-//        
-//        if (request.error)
-//            err(@"Failed from: %@, error: %@", request.url, request.error);
-//        else
-//            trc(@"In from: %@, data:\n%@", request.url, [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
-//        
-//        if ([self isSynchronous])
-//            completion(responseData, request.error);
-//        else
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                completion(responseData, request.error);
-//            });
-//    } copy];
-//    
-//    if (request) {
-//        if ([self isSynchronous])
-//            handleRequest();
-//        else
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), handleRequest);
-//    } else
-//        err(@"Request method not supported: %d", method);
-//    
-//    return request;
 }
 
 - (id)requestWithObject:(id)object method:(PearlWSRequestMethod)method popupOnError:(BOOL)popupOnError

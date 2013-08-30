@@ -170,8 +170,8 @@
 		F7C335D517D0A29700D0A7AE /* Fiorite */ = {
 			isa = PBXGroup;
 			children = (
-				F7526CCF17D0C5E400049AAB /* UIKit */,
 				F7526CCE17D0C5D800049AAB /* Core */,
+				F7526CCF17D0C5E400049AAB /* UIKit */,
 				F7526CCD17D0C5CF00049AAB /* WS */,
 			);
 			path = Fiorite;
