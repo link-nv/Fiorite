@@ -14,4 +14,7 @@
 #import "PearlStringUtils.h"
 #import "PearlCodeUtils.h"
 #import "PearlObjectUtils.h"
+#import "PearlDeviceUtils.h"
 #import "PearlAlert.h"
+#import "PearlConfig.h"
+
