@@ -15,9 +15,11 @@
 		F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CA217D0C0D300049AAB /* PearlStringUtils.m */; };
 		F7526CA617D0C10500049AAB /* PearlStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CA517D0C10500049AAB /* PearlStrings.m */; };
 		F7526CA917D0C14400049AAB /* PearlAbstractStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */; };
+		F7526CC617D0C4D500049AAB /* PearlWSController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CC517D0C4D500049AAB /* PearlWSController.m */; };
+		F7526CC917D0C50B00049AAB /* NSString+PearlNSArrayFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */; };
+		F7526CCC17D0C54600049AAB /* NSObject+PearlExport.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CCB17D0C54600049AAB /* NSObject+PearlExport.m */; };
+		F7526CD217D0C5F200049AAB /* PearlAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CD117D0C5F200049AAB /* PearlAlert.m */; };
 		F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D317D0A29700D0A7AE /* Foundation.framework */; };
-		F7C335D917D0A29700D0A7AE /* Fiorite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7C335D817D0A29700D0A7AE /* Fiorite.h */; };
-		F7C335DB17D0A29700D0A7AE /* Fiorite.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C335DA17D0A29700D0A7AE /* Fiorite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +29,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				F7C335D917D0A29700D0A7AE /* Fiorite.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,11 +51,17 @@
 		F7526CA517D0C10500049AAB /* PearlStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlStrings.m; sourceTree = "<group>"; };
 		F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlAbstractStrings.h; sourceTree = "<group>"; };
 		F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlAbstractStrings.m; sourceTree = "<group>"; };
+		F7526CC417D0C4D500049AAB /* PearlWSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlWSController.h; sourceTree = "<group>"; };
+		F7526CC517D0C4D500049AAB /* PearlWSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlWSController.m; sourceTree = "<group>"; };
+		F7526CC717D0C50B00049AAB /* NSString+PearlNSArrayFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PearlNSArrayFormat.h"; sourceTree = "<group>"; };
+		F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PearlNSArrayFormat.m"; sourceTree = "<group>"; };
+		F7526CCA17D0C54600049AAB /* NSObject+PearlExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PearlExport.h"; sourceTree = "<group>"; };
+		F7526CCB17D0C54600049AAB /* NSObject+PearlExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PearlExport.m"; sourceTree = "<group>"; };
+		F7526CD017D0C5F200049AAB /* PearlAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlAlert.h; sourceTree = "<group>"; };
+		F7526CD117D0C5F200049AAB /* PearlAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlAlert.m; sourceTree = "<group>"; };
 		F7C335D017D0A29700D0A7AE /* libFiorite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFiorite.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C335D317D0A29700D0A7AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7C335D717D0A29700D0A7AE /* Fiorite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fiorite-Prefix.pch"; sourceTree = "<group>"; };
-		F7C335D817D0A29700D0A7AE /* Fiorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fiorite.h; sourceTree = "<group>"; };
-		F7C335DA17D0A29700D0A7AE /* Fiorite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fiorite.m; sourceTree = "<group>"; };
 		F7C335E117D0A29800D0A7AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F7C335E417D0A29800D0A7AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +79,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7526CCD17D0C5CF00049AAB /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				F7526CC417D0C4D500049AAB /* PearlWSController.h */,
+				F7526CC517D0C4D500049AAB /* PearlWSController.m */,
+			);
+			name = WS;
+			sourceTree = "<group>";
+		};
+		F7526CCE17D0C5D800049AAB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F7526C9417D0BDAE00049AAB /* PearlLogger.h */,
+				F7526C9517D0BDAE00049AAB /* PearlLogger.m */,
+				F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */,
+				F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */,
+				F7526C9A17D0BEB800049AAB /* NSString+PearlSEL.h */,
+				F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */,
+				F7526C9E17D0C03100049AAB /* PearlCodeUtils.h */,
+				F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */,
+				F7526CA117D0C0D300049AAB /* PearlStringUtils.h */,
+				F7526CA217D0C0D300049AAB /* PearlStringUtils.m */,
+				F7526CA417D0C10500049AAB /* PearlStrings.h */,
+				F7526CA517D0C10500049AAB /* PearlStrings.m */,
+				F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */,
+				F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */,
+				F7526CC717D0C50B00049AAB /* NSString+PearlNSArrayFormat.h */,
+				F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */,
+				F7526CCA17D0C54600049AAB /* NSObject+PearlExport.h */,
+				F7526CCB17D0C54600049AAB /* NSObject+PearlExport.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		F7526CCF17D0C5E400049AAB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7526CD017D0C5F200049AAB /* PearlAlert.h */,
+				F7526CD117D0C5F200049AAB /* PearlAlert.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		F7C335C717D0A29700D0A7AE = {
 			isa = PBXGroup;
 			children = (
@@ -105,22 +155,9 @@
 		F7C335D517D0A29700D0A7AE /* Fiorite */ = {
 			isa = PBXGroup;
 			children = (
-				F7C335D817D0A29700D0A7AE /* Fiorite.h */,
-				F7C335DA17D0A29700D0A7AE /* Fiorite.m */,
-				F7526C9417D0BDAE00049AAB /* PearlLogger.h */,
-				F7526C9517D0BDAE00049AAB /* PearlLogger.m */,
-				F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */,
-				F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */,
-				F7526C9A17D0BEB800049AAB /* NSString+PearlSEL.h */,
-				F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */,
-				F7526C9E17D0C03100049AAB /* PearlCodeUtils.h */,
-				F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */,
-				F7526CA117D0C0D300049AAB /* PearlStringUtils.h */,
-				F7526CA217D0C0D300049AAB /* PearlStringUtils.m */,
-				F7526CA417D0C10500049AAB /* PearlStrings.h */,
-				F7526CA517D0C10500049AAB /* PearlStrings.m */,
-				F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */,
-				F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */,
+				F7526CCF17D0C5E400049AAB /* UIKit */,
+				F7526CCE17D0C5D800049AAB /* Core */,
+				F7526CCD17D0C5CF00049AAB /* WS */,
 			);
 			path = Fiorite;
 			sourceTree = "<group>";
@@ -222,12 +259,15 @@
 			files = (
 				F7526CA017D0C03100049AAB /* PearlCodeUtils.m in Sources */,
 				F7526CA617D0C10500049AAB /* PearlStrings.m in Sources */,
+				F7526CCC17D0C54600049AAB /* NSObject+PearlExport.m in Sources */,
+				F7526CC617D0C4D500049AAB /* PearlWSController.m in Sources */,
 				F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */,
+				F7526CC917D0C50B00049AAB /* NSString+PearlNSArrayFormat.m in Sources */,
 				F7526CA917D0C14400049AAB /* PearlAbstractStrings.m in Sources */,
 				F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */,
 				F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */,
-				F7C335DB17D0A29700D0A7AE /* Fiorite.m in Sources */,
 				F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */,
+				F7526CD217D0C5F200049AAB /* PearlAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
