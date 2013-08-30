@@ -18,4 +18,8 @@
 #import "PearlAlert.h"
 #import "PearlConfig.h"
 #import "PearlSheet.h"
+#import "PearlInfoPlist.h"
+#import "PearlAppDelegate.h"
+#import "PearlUIUtils.h"
+#import "PearlBoxView.h"
 
