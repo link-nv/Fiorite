@@ -7,3 +7,10 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
 #endif
+
+#import "NSString+PearlSEL.h"
+#import "PearlLogger.h"
+#import "PearlStrings.h"
+#import "PearlStringUtils.h"
+#import "PearlCodeUtils.h"
+#import "PearlObjectUtils.h"

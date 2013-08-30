@@ -8,24 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B1E050698147DEA8EA5396 /* libPods.a */; };
+		F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9517D0BDAE00049AAB /* PearlLogger.m */; };
+		F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */; };
+		F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */; };
+		F7526CA017D0C03100049AAB /* PearlCodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */; };
+		F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CA217D0C0D300049AAB /* PearlStringUtils.m */; };
+		F7526CA617D0C10500049AAB /* PearlStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CA517D0C10500049AAB /* PearlStrings.m */; };
+		F7526CA917D0C14400049AAB /* PearlAbstractStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */; };
 		F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D317D0A29700D0A7AE /* Foundation.framework */; };
 		F7C335D917D0A29700D0A7AE /* Fiorite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7C335D817D0A29700D0A7AE /* Fiorite.h */; };
 		F7C335DB17D0A29700D0A7AE /* Fiorite.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C335DA17D0A29700D0A7AE /* Fiorite.m */; };
-		F7C335E217D0A29800D0A7AE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335E117D0A29800D0A7AE /* XCTest.framework */; };
-		F7C335E317D0A29800D0A7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D317D0A29700D0A7AE /* Foundation.framework */; };
-		F7C335E517D0A29800D0A7AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335E417D0A29800D0A7AE /* UIKit.framework */; };
-		F7C335E817D0A29800D0A7AE /* libFiorite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D017D0A29700D0A7AE /* libFiorite.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F7C335E617D0A29800D0A7AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7C335C817D0A29700D0A7AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7C335CF17D0A29700D0A7AE;
-			remoteInfo = Fiorite;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F7C335CE17D0A29700D0A7AE /* CopyFiles */ = {
@@ -43,12 +36,25 @@
 /* Begin PBXFileReference section */
 		DB9527A873CF40AF900172B9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F2B1E050698147DEA8EA5396 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7526C9417D0BDAE00049AAB /* PearlLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlLogger.h; sourceTree = "<group>"; };
+		F7526C9517D0BDAE00049AAB /* PearlLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlLogger.m; sourceTree = "<group>"; };
+		F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlObjectUtils.h; sourceTree = "<group>"; };
+		F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlObjectUtils.m; sourceTree = "<group>"; };
+		F7526C9A17D0BEB800049AAB /* NSString+PearlSEL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PearlSEL.h"; sourceTree = "<group>"; };
+		F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PearlSEL.m"; sourceTree = "<group>"; };
+		F7526C9E17D0C03100049AAB /* PearlCodeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlCodeUtils.h; sourceTree = "<group>"; };
+		F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlCodeUtils.m; sourceTree = "<group>"; };
+		F7526CA117D0C0D300049AAB /* PearlStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlStringUtils.h; sourceTree = "<group>"; };
+		F7526CA217D0C0D300049AAB /* PearlStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlStringUtils.m; sourceTree = "<group>"; };
+		F7526CA417D0C10500049AAB /* PearlStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlStrings.h; sourceTree = "<group>"; };
+		F7526CA517D0C10500049AAB /* PearlStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlStrings.m; sourceTree = "<group>"; };
+		F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlAbstractStrings.h; sourceTree = "<group>"; };
+		F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlAbstractStrings.m; sourceTree = "<group>"; };
 		F7C335D017D0A29700D0A7AE /* libFiorite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFiorite.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C335D317D0A29700D0A7AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7C335D717D0A29700D0A7AE /* Fiorite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fiorite-Prefix.pch"; sourceTree = "<group>"; };
 		F7C335D817D0A29700D0A7AE /* Fiorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fiorite.h; sourceTree = "<group>"; };
 		F7C335DA17D0A29700D0A7AE /* Fiorite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fiorite.m; sourceTree = "<group>"; };
-		F7C335E017D0A29800D0A7AE /* FioriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FioriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C335E117D0A29800D0A7AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F7C335E417D0A29800D0A7AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -63,17 +69,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7C335DD17D0A29800D0A7AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7C335E817D0A29800D0A7AE /* libFiorite.a in Frameworks */,
-				F7C335E217D0A29800D0A7AE /* XCTest.framework in Frameworks */,
-				F7C335E517D0A29800D0A7AE /* UIKit.framework in Frameworks */,
-				F7C335E317D0A29800D0A7AE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C335D517D0A29700D0A7AE /* Fiorite */,
+				F7C335D617D0A29700D0A7AE /* Supporting Files */,
 				F7C335D217D0A29700D0A7AE /* Frameworks */,
 				F7C335D117D0A29700D0A7AE /* Products */,
 				DB9527A873CF40AF900172B9 /* Pods.xcconfig */,
@@ -91,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				F7C335D017D0A29700D0A7AE /* libFiorite.a */,
-				F7C335E017D0A29800D0A7AE /* FioriteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +107,20 @@
 			children = (
 				F7C335D817D0A29700D0A7AE /* Fiorite.h */,
 				F7C335DA17D0A29700D0A7AE /* Fiorite.m */,
-				F7C335D617D0A29700D0A7AE /* Supporting Files */,
+				F7526C9417D0BDAE00049AAB /* PearlLogger.h */,
+				F7526C9517D0BDAE00049AAB /* PearlLogger.m */,
+				F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */,
+				F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */,
+				F7526C9A17D0BEB800049AAB /* NSString+PearlSEL.h */,
+				F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */,
+				F7526C9E17D0C03100049AAB /* PearlCodeUtils.h */,
+				F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */,
+				F7526CA117D0C0D300049AAB /* PearlStringUtils.h */,
+				F7526CA217D0C0D300049AAB /* PearlStringUtils.m */,
+				F7526CA417D0C10500049AAB /* PearlStrings.h */,
+				F7526CA517D0C10500049AAB /* PearlStrings.m */,
+				F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */,
+				F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */,
 			);
 			path = Fiorite;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 				F7C335D717D0A29700D0A7AE /* Fiorite-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Fiorite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,24 +156,6 @@
 			productReference = F7C335D017D0A29700D0A7AE /* libFiorite.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F7C335DF17D0A29800D0A7AE /* FioriteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7C335F617D0A29800D0A7AE /* Build configuration list for PBXNativeTarget "FioriteTests" */;
-			buildPhases = (
-				F7C335DC17D0A29800D0A7AE /* Sources */,
-				F7C335DD17D0A29800D0A7AE /* Frameworks */,
-				F7C335DE17D0A29800D0A7AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7C335E717D0A29800D0A7AE /* PBXTargetDependency */,
-			);
-			name = FioriteTests;
-			productName = FioriteTests;
-			productReference = F7C335E017D0A29800D0A7AE /* FioriteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,20 +178,9 @@
 			projectRoot = "";
 			targets = (
 				F7C335CF17D0A29700D0A7AE /* Fiorite */,
-				F7C335DF17D0A29800D0A7AE /* FioriteTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		F7C335DE17D0A29800D0A7AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		11555FA3EECF459380F750A6 /* Copy Pods Resources */ = {
@@ -240,26 +220,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7526CA017D0C03100049AAB /* PearlCodeUtils.m in Sources */,
+				F7526CA617D0C10500049AAB /* PearlStrings.m in Sources */,
+				F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */,
+				F7526CA917D0C14400049AAB /* PearlAbstractStrings.m in Sources */,
+				F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */,
+				F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */,
 				F7C335DB17D0A29700D0A7AE /* Fiorite.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C335DC17D0A29800D0A7AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F7C335E717D0A29800D0A7AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7C335CF17D0A29700D0A7AE /* Fiorite */;
-			targetProxy = F7C335E617D0A29800D0A7AE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F7C335F117D0A29800D0A7AE /* Debug */ = {
@@ -364,42 +336,6 @@
 			};
 			name = Release;
 		};
-		F7C335F717D0A29800D0A7AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fiorite/Fiorite-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "FioriteTests/FioriteTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F7C335F817D0A29800D0A7AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fiorite/Fiorite-Prefix.pch";
-				INFOPLIST_FILE = "FioriteTests/FioriteTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -417,15 +353,6 @@
 			buildConfigurations = (
 				F7C335F417D0A29800D0A7AE /* Debug */,
 				F7C335F517D0A29800D0A7AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7C335F617D0A29800D0A7AE /* Build configuration list for PBXNativeTarget "FioriteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7C335F717D0A29800D0A7AE /* Debug */,
-				F7C335F817D0A29800D0A7AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
