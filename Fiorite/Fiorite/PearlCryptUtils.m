@@ -53,21 +53,11 @@ NSString *NSStringFromErrSec(OSStatus status) {
             return [NSString stringWithFormat:@"No error (errSecSuccess: %ld).", (long)status];
         case errSecUnimplemented:
             return [NSString stringWithFormat:@"Function or operation not implemented (errSecUnimplemented: %ld).", (long)status];
-        case errSecIO:
-            return [NSString stringWithFormat:@"I/O error (bummers) (errSecIO: %ld).", (long)status];
-        case errSecOpWr:
-            return [NSString stringWithFormat:@"file already open with with write permission (errSecOpWr: %ld).", (long)status];
         case errSecParam:
             return [NSString stringWithFormat:@"One or more parameters passed to a function where not valid (errSecParam: %ld).",
                     (long)status];
         case errSecAllocate:
             return [NSString stringWithFormat:@"Failed to allocate memory (errSecAllocate: %ld).", (long)status];
-        case errSecUserCanceled:
-            return [NSString stringWithFormat:@"User canceled the operation (errSecUserCanceled: %ld).", (long)status];
-        case errSecBadReq:
-            return [NSString stringWithFormat:@"Bad parameter or invalid state for operation (errSecBadReq: %ld).", (long)status];
-        case errSecInternalComponent:
-            return [NSString stringWithFormat:@"[No documentation] (errSecInternalComponent: %ld).", (long)status];
         case errSecNotAvailable:
             return [NSString stringWithFormat:@"No keychain is available. You may need to restart your computer (errSecNotAvailable: %ld).",
                     (long)status];
@@ -84,6 +74,18 @@ NSString *NSStringFromErrSec(OSStatus status) {
         case errSecAuthFailed:
             return [NSString stringWithFormat:@"The user name or passphrase you entered is not correct (errSecAuthFailed: %ld).",
                     (long)status];
+            
+//        case errSecIO:
+//            return [NSString stringWithFormat:@"I/O error (bummers) (errSecIO: %ld).", (long)status];
+//        case errSecOpWr:
+//            return [NSString stringWithFormat:@"file already open with with write permission (errSecOpWr: %ld).", (long)status];
+//        case errSecUserCanceled:
+//            return [NSString stringWithFormat:@"User canceled the operation (errSecUserCanceled: %ld).", (long)status];
+//        case errSecBadReq:
+//            return [NSString stringWithFormat:@"Bad parameter or invalid state for operation (errSecBadReq: %ld).", (long)status];
+//        case errSecInternalComponent:
+//            return [NSString stringWithFormat:@"[No documentation] (errSecInternalComponent: %ld).", (long)status];
+           
         default:
             wrn(@"Security Error status code not known: %ld", (long)status);
             return PearlString( @"Unknown status (%ld).", (long)status );
