@@ -143,7 +143,7 @@
             }
             [postParameters setObject:[PearlConfig get].build forKey:REQUEST_KEY_VERSION];
             
-            [httpClient postPath:nil parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [httpClient postPath:[self.serverURL absoluteString] parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
                 completion(responseObject, nil);
 
@@ -160,7 +160,7 @@
             AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
             [httpClient setParameterEncoding:AFJSONParameterEncoding];
             
-            [httpClient postPath:nil parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [httpClient postPath:[self.serverURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 
                 completion(responseObject, nil);
                 
