@@ -26,6 +26,8 @@
 #import "NSObject+PearlExport.h"
 #import <AFHTTPClient.h>
 #import "PearlImports.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 #define JSON_NON_EXECUTABLE_PREFIX      @")]}'\n"
 
