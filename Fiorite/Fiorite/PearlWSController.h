@@ -18,6 +18,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AFURLConnectionOperation.h"
+
 __BEGIN_DECLS
 typedef enum {
     /** Submit the parameters in a www-form encoded HTTP-GET request. */
@@ -138,6 +140,12 @@ __END_DECLS
  * Override this method to make the operations synchronous.  Defaults to NO.
  */
 - (BOOL)isSynchronous;
+
+/**
+ * Override SSL Pinning mode, default is AFSSLPinningModePublicKey.
+ * Provide your SSL certificate, DER encoded in your app bundle with a .cer extension.
+ */
+- (AFURLConnectionOperationSSLPinningMode) sslPinningMode;
 
 @end
 

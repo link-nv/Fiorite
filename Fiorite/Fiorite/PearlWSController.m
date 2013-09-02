@@ -90,6 +90,11 @@
     return NO;
 }
 
+- (AFURLConnectionOperationSSLPinningMode) sslPinningMode {
+    
+    return AFSSLPinningModePublicKey;
+}
+
 - (void)reset {
     
 //    [ASIHTTPRequest clearSession];
@@ -105,6 +110,7 @@
         case PearlWSRequestMethodGET_REST: {
 
             AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
+            httpClient.defaultSSLPinningMode = self.sslPinningMode;
 
             NSMutableString *urlString = [[self.serverURL absoluteString] mutableCopy];
             BOOL hasQuery = [urlString rangeOfString:@"?"].location != NSNotFound;
@@ -135,6 +141,7 @@
         case PearlWSRequestMethodPOST_REST: {
 
             AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
+            httpClient.defaultSSLPinningMode = self.sslPinningMode;
             
             NSMutableDictionary *postParameters = [[NSMutableDictionary alloc] initWithCapacity:parameters.count + 1];
             for( NSString *key in [parameters allKeys]) {
@@ -158,6 +165,8 @@
         case PearlWSRequestMethodPOST_JSON: {
             
             AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
+            httpClient.defaultSSLPinningMode = self.sslPinningMode;
+
             [httpClient setParameterEncoding:AFJSONParameterEncoding];
             
             [httpClient postPath:[self.serverURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
