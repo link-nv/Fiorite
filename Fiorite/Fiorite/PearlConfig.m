@@ -25,6 +25,8 @@
 #import <Cocoa/Cocoa.h>
 #endif
 
+#import "PearlConfig.h"
+
 @interface PearlConfig()
 
 @property(nonatomic, readwrite, retain) NSUserDefaults *defaults;

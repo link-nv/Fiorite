@@ -16,6 +16,8 @@
 //  Copyright 2009 lhunath (Maarten Billemont). All rights reserved.
 //
 
+#import "NSString+PearlNSArrayFormat.h"
+
 @implementation NSString(PearlNSArrayFormat)
 
 - (id)initWithFormat:(NSString *)format array:(NSArray *)arguments {

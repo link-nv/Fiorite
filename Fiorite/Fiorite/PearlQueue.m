@@ -16,6 +16,8 @@
 //  Copyright 2009 lhunath (Maarten Billemont). All rights reserved.
 //
 
+#import "PearlQueue.h"
+
 @implementation PearlQueue
 
 @synthesize array = _array, maximumCapacity = _maximumCapacity, overflowStrategy = _overflowStrategy;

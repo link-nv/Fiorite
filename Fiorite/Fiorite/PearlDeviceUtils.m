@@ -18,6 +18,7 @@
 
 #include <sys/sysctl.h>
 #import <mach-o/ldsyms.h>
+#import "PearlDeviceUtils.h"
 
 @implementation PearlDeviceUtils
 

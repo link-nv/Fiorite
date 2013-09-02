@@ -17,6 +17,7 @@
 //
 
 #import "objc/runtime.h"
+#import "PearlObjectUtils.h"
 
 @implementation PearlObjectUtils
 

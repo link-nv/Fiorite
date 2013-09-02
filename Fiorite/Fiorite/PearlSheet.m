@@ -21,6 +21,8 @@
 //  Copyright, lhunath (Maarten Billemont) 2009. All rights reserved.
 //
 
+#import "PearlSheet.h"
+
 @implementation PearlSheet
 
 + (NSMutableArray *)activeSheets {

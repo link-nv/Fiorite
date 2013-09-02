@@ -15,6 +15,8 @@
 //  Copyright (c) 2012 Lyndir. All rights reserved.
 //
 
+#import "PearlInfoPlist.h"
+
 NSComparisonResult PearlCFBundleVersionCompare(NSString *bundleVersion1, NSString *bundleVersion2) {
     
     NSArray *bundleVersion1Components = [bundleVersion1 componentsSeparatedByString:@"."];

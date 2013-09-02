@@ -34,6 +34,8 @@
 @"itms://itunes.com/apps/%@", __app]]
 #endif
 
+#import "PearlAppDelegate.h"
+
 @implementation PearlAppDelegate
 
 @synthesize window = _window, navigationController = _navigationController;

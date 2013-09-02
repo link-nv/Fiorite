@@ -16,6 +16,8 @@
 //  Copyright 2010 lhunath (Maarten Billemont). All rights reserved.
 //
 
+#import "PearlBoxView.h"
+
 @implementation PearlBoxView
 
 @synthesize color = _color, width = _width, filled = _filled;

@@ -17,6 +17,7 @@
 //
 
 #import <objc/runtime.h>
+#import "NSObject+PearlExport.h"
 
 @implementation NSObject(PearlExport)
 
