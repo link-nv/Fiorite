@@ -16,7 +16,7 @@
 //  Copyright 2009, lhunath (Maarten Billemont). All rights reserved.
 //
 
-#import "PearlStringUtils.h"
+#import "PearlImports.h"
 
 NSString *PearlString(NSString *format, ...) {
     

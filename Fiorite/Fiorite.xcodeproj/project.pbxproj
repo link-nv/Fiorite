@@ -97,6 +97,7 @@
 		F7C335D717D0A29700D0A7AE /* Fiorite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fiorite-Prefix.pch"; sourceTree = "<group>"; };
 		F7C335E117D0A29800D0A7AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F7C335E417D0A29800D0A7AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F7D73A4917D4A59500C0E907 /* PearlImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlImports.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,10 +218,11 @@
 		F7C335D517D0A29700D0A7AE /* Fiorite */ = {
 			isa = PBXGroup;
 			children = (
-				F7526DA717D0DCBD00049AAB /* Crypto */,
 				F7526CCE17D0C5D800049AAB /* Core */,
+				F7526DA717D0DCBD00049AAB /* Crypto */,
 				F7526CCF17D0C5E400049AAB /* UIKit */,
 				F7526CCD17D0C5CF00049AAB /* WS */,
+				F7D73A4917D4A59500C0E907 /* PearlImports.h */,
 			);
 			path = Fiorite;
 			sourceTree = "<group>";

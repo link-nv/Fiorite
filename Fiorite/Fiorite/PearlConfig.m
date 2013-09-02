@@ -25,7 +25,7 @@
 #import <Cocoa/Cocoa.h>
 #endif
 
-#import "PearlConfig.h"
+#import "PearlImports.h"
 
 @interface PearlConfig()
 

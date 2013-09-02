@@ -25,6 +25,7 @@
 #import "CJSONSerializer.h"
 #import "NSObject+PearlExport.h"
 #import <AFHTTPClient.h>
+#import "PearlImports.h"
 
 #define JSON_NON_EXECUTABLE_PREFIX      @")]}'\n"
 

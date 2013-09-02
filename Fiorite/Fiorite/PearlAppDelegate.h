@@ -17,6 +17,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PearlImports.h"
 
 @interface PearlAppDelegate : UIResponder<UIApplicationDelegate, PearlConfigDelegate> {
     

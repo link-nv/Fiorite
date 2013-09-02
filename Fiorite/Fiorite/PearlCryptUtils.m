@@ -19,7 +19,7 @@
 
 #import <CommonCrypto/CommonHMAC.h>
 
-#import "PearlCryptUtils.h"
+#import "PearlImports.h"
 
 NSString *NSStringFromCCCryptorStatus(CCCryptorStatus status) {
     

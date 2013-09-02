@@ -16,7 +16,7 @@
 //  Copyright 2009 lhunath (Maarten Billemont). All rights reserved.
 //
 
-#import "PearlLogger.h"
+#import "PearlImports.h"
 
 const char *PearlLogLevelStr(PearlLogLevel level) {
     

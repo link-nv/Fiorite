@@ -1,8 +1,3 @@
-@interface PearlAlert()
-
-@property(nonatomic) BOOL handlingClick;
-@end
-
 /**
  * Copyright Maarten Billemont (http://www.lhunath.com, lhunath@lyndir.com)
  *
@@ -21,7 +16,12 @@
 //  Copyright, lhunath (Maarten Billemont) 2008. All rights reserved.
 //
 
-#import "PearlAlert.h"
+#import "PearlImports.h"
+
+@interface PearlAlert()
+
+@property(nonatomic) BOOL handlingClick;
+@end
 
 @implementation PearlAlert
 

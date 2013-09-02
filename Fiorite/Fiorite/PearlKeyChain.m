@@ -20,6 +20,7 @@
 #import "PearlCryptUtils.h"
 #import "PearlLogger.h"
 #import "PearlKeyChain.h"
+#import "PearlCodeUtils.h"
 
 @implementation NSString(PearlKeyChain)
 
