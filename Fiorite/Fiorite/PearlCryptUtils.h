@@ -18,7 +18,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCryptor.h>
-#import "PearlImports.h"
 
 #ifndef PearlCryptAlgorithm
 #define PearlCryptAlgorithm     kCCAlgorithmAES128
