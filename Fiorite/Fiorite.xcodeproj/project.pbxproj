@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B1E050698147DEA8EA5396 /* libPods.a */; };
+		F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */; };
 		F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9517D0BDAE00049AAB /* PearlLogger.m */; };
 		F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */; };
 		F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		DB9527A873CF40AF900172B9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F2B1E050698147DEA8EA5396 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PearlKVO.h"; sourceTree = "<group>"; };
+		F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PearlKVO.m"; sourceTree = "<group>"; };
 		F7526C9417D0BDAE00049AAB /* PearlLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlLogger.h; sourceTree = "<group>"; };
 		F7526C9517D0BDAE00049AAB /* PearlLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlLogger.m; sourceTree = "<group>"; };
 		F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlObjectUtils.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				F7526D8217D0D91C00049AAB /* PearlInfoPlist.m */,
 				F7526D9C17D0DB0300049AAB /* PearlQueue.h */,
 				F7526D9D17D0DB0300049AAB /* PearlQueue.m */,
+				F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */,
+				F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */,
 				F7526CD217D0C5F200049AAB /* PearlAlert.m in Sources */,
 				F7526D8017D0D8DD00049AAB /* PearlAppDelegate.m in Sources */,
+				F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

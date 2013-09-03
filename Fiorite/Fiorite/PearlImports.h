@@ -23,3 +23,5 @@
 #import "PearlBoxView.h"
 #import "PearlQueue.h"
 #import "PearlKeyChain.h"
+#import "NSObject+PearlKVO.h"
+#import "UIImage+PearlScaling.h"
