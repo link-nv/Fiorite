@@ -9,14 +9,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.0.2" }
   
   s.ios.deployment_target = '5.0'
-  s.ios.source_files  = 'Fiorite/Fiorite/*.{h,m}', 'Fiorite/Firote-iOS/*.{h,m}'
+  s.ios.source_files  = 'Fiorite/Fiorite/*.{h,m}', 'Fiorite/Fiorite-iOS/*.{h,m}'
   s.ios.frameworks  = 'Security', 'MobileCoreServices', 'SystemConfiguration'
-  s.ios.compiler_flags = '-DTARGET_OS_IPHONE=1'
 
   s.osx.deployment_target = '10.7'
   s.osx.frameworks = 'Security', 'CoreServices', 'SystemConfiguration'
   s.osx.source_files = 'Fiorite/Fiorite/*.{h,m}'
-  s.osx.compiler_flags = '-DTARGET_OS_IPHONE=0'
 
   s.requires_arc = true
 
