@@ -6,14 +6,22 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'LGPL v3', :file => 'LICENSE' }
   s.author       = { "Wim Vandenhaute" => "wim.vandenhaute@gmail.com" }
   s.platform     = :ios, '5.0'
-  s.ios.deployment_target = '5.0'
   s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.0.1" }
-  s.source_files  = 'Fiorite/Fiorite/**/*.{h,m}'
+  
+  s.ios.deployment_target = '5.0'
+  s.ios.source_files  = 'Fiorite/Fiorite/*.{h,m}', 'Fiorite/Firote-iOS/*.{h,m}'
   s.ios.frameworks  = 'Security', 'MobileCoreServices', 'SystemConfiguration'
+  
+  s.osx.deployment_target = '10.7'
+  s.osx.frameworks = 'Security', 'CoreServices', 'SystemConfiguration'
+  s.osx.source_files = 'Fiorite/Fiorite/*.{h,m}'
+
   s.requires_arc = true
+
   s.dependency 'AFNetworking', '~> 1.3.2'
   s.dependency 'Reachability', '~> 3.1.0'
   s.dependency 'TouchJSON',    '~> 1.1'
   s.dependency 'JRSwizzle',    '~> 1.0'
-  s.dependency 'UIColor-Utilities', '~> 1.0.1'
+  
+  s.ios.dependency 'UIColor-Utilities', '~> 1.0.1'
 end

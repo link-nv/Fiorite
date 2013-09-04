@@ -19,6 +19,7 @@
 //
 
 #import "PearlImports.h"
+#import "FioriteIOSImports.h"
 
 @implementation UIImage(PearlScaling)
 

@@ -16,7 +16,9 @@
 //  Copyright, lhunath (Maarten Billemont) 2008. All rights reserved.
 //
 
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 #import <UIKit/UIKit.h>
+#endif
 #import "PearlImports.h"
 
 @interface PearlAppDelegate : UIResponder<UIApplicationDelegate, PearlConfigDelegate> {

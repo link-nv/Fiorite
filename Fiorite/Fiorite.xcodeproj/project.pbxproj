@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B1E050698147DEA8EA5396 /* libPods.a */; };
 		F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */; };
+		F7088CD017D71C1900AA6787 /* PearlAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CC717D71C1900AA6787 /* PearlAlert.m */; };
+		F7088CD117D71C1900AA6787 /* PearlBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CC917D71C1900AA6787 /* PearlBoxView.m */; };
+		F7088CD217D71C1900AA6787 /* PearlSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CCB17D71C1900AA6787 /* PearlSheet.m */; };
+		F7088CD317D71C1900AA6787 /* PearlUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CCD17D71C1900AA6787 /* PearlUIUtils.m */; };
+		F7088CD417D71C1900AA6787 /* UIImage+PearlScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CCF17D71C1900AA6787 /* UIImage+PearlScaling.m */; };
+		F7088CD817D71D4E00AA6787 /* PearlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CD717D71D4E00AA6787 /* PearlAppDelegate.m */; };
 		F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9517D0BDAE00049AAB /* PearlLogger.m */; };
 		F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */; };
 		F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */; };
@@ -19,15 +25,9 @@
 		F7526CC617D0C4D500049AAB /* PearlWSController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CC517D0C4D500049AAB /* PearlWSController.m */; };
 		F7526CC917D0C50B00049AAB /* NSString+PearlNSArrayFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */; };
 		F7526CCC17D0C54600049AAB /* NSObject+PearlExport.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CCB17D0C54600049AAB /* NSObject+PearlExport.m */; };
-		F7526CD217D0C5F200049AAB /* PearlAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CD117D0C5F200049AAB /* PearlAlert.m */; };
 		F7526CF717D0C6B500049AAB /* PearlConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CF617D0C6B500049AAB /* PearlConfig.m */; };
 		F7526CFA17D0C6EA00049AAB /* PearlDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526CF917D0C6EA00049AAB /* PearlDeviceUtils.m */; };
-		F7526D2517D0C76200049AAB /* PearlSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D2417D0C76200049AAB /* PearlSheet.m */; };
-		F7526D8017D0D8DD00049AAB /* PearlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D7F17D0D8DD00049AAB /* PearlAppDelegate.m */; };
 		F7526D8317D0D91C00049AAB /* PearlInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D8217D0D91C00049AAB /* PearlInfoPlist.m */; };
-		F7526D8717D0D99600049AAB /* PearlUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D8617D0D99600049AAB /* PearlUIUtils.m */; };
-		F7526D8A17D0D9D500049AAB /* PearlBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D8917D0D9D500049AAB /* PearlBoxView.m */; };
-		F7526D9B17D0DADF00049AAB /* UIImage+PearlScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D9A17D0DADF00049AAB /* UIImage+PearlScaling.m */; };
 		F7526D9E17D0DB0300049AAB /* PearlQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D9D17D0DB0300049AAB /* PearlQueue.m */; };
 		F7526DAA17D0DCCA00049AAB /* PearlKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526DA917D0DCCA00049AAB /* PearlKeyChain.m */; };
 		F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526DAC17D0DCF200049AAB /* PearlCryptUtils.m */; };
@@ -51,6 +51,24 @@
 		F2B1E050698147DEA8EA5396 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PearlKVO.h"; sourceTree = "<group>"; };
 		F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PearlKVO.m"; sourceTree = "<group>"; };
+		F7088C7D17D70FA800AA6787 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		F7088C8017D70FA800AA6787 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7088C8117D70FA800AA6787 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F7088C8217D70FA800AA6787 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F7088C8E17D70FA900AA6787 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F7088CC617D71C1900AA6787 /* PearlAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PearlAlert.h; path = "Fiorite-iOS/PearlAlert.h"; sourceTree = "<group>"; };
+		F7088CC717D71C1900AA6787 /* PearlAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PearlAlert.m; path = "Fiorite-iOS/PearlAlert.m"; sourceTree = "<group>"; };
+		F7088CC817D71C1900AA6787 /* PearlBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PearlBoxView.h; path = "Fiorite-iOS/PearlBoxView.h"; sourceTree = "<group>"; };
+		F7088CC917D71C1900AA6787 /* PearlBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PearlBoxView.m; path = "Fiorite-iOS/PearlBoxView.m"; sourceTree = "<group>"; };
+		F7088CCA17D71C1900AA6787 /* PearlSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PearlSheet.h; path = "Fiorite-iOS/PearlSheet.h"; sourceTree = "<group>"; };
+		F7088CCB17D71C1900AA6787 /* PearlSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PearlSheet.m; path = "Fiorite-iOS/PearlSheet.m"; sourceTree = "<group>"; };
+		F7088CCC17D71C1900AA6787 /* PearlUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PearlUIUtils.h; path = "Fiorite-iOS/PearlUIUtils.h"; sourceTree = "<group>"; };
+		F7088CCD17D71C1900AA6787 /* PearlUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PearlUIUtils.m; path = "Fiorite-iOS/PearlUIUtils.m"; sourceTree = "<group>"; };
+		F7088CCE17D71C1900AA6787 /* UIImage+PearlScaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+PearlScaling.h"; path = "Fiorite-iOS/UIImage+PearlScaling.h"; sourceTree = "<group>"; };
+		F7088CCF17D71C1900AA6787 /* UIImage+PearlScaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PearlScaling.m"; path = "Fiorite-iOS/UIImage+PearlScaling.m"; sourceTree = "<group>"; };
+		F7088CD617D71D4E00AA6787 /* PearlAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PearlAppDelegate.h; path = "Fiorite-iOS/PearlAppDelegate.h"; sourceTree = "<group>"; };
+		F7088CD717D71D4E00AA6787 /* PearlAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PearlAppDelegate.m; path = "Fiorite-iOS/PearlAppDelegate.m"; sourceTree = "<group>"; };
+		F7088CD917D71D7D00AA6787 /* FioriteIOSImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FioriteIOSImports.h; path = "Fiorite-iOS/FioriteIOSImports.h"; sourceTree = "<group>"; };
 		F7526C9417D0BDAE00049AAB /* PearlLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlLogger.h; sourceTree = "<group>"; };
 		F7526C9517D0BDAE00049AAB /* PearlLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlLogger.m; sourceTree = "<group>"; };
 		F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlObjectUtils.h; sourceTree = "<group>"; };
@@ -71,24 +89,12 @@
 		F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PearlNSArrayFormat.m"; sourceTree = "<group>"; };
 		F7526CCA17D0C54600049AAB /* NSObject+PearlExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PearlExport.h"; sourceTree = "<group>"; };
 		F7526CCB17D0C54600049AAB /* NSObject+PearlExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PearlExport.m"; sourceTree = "<group>"; };
-		F7526CD017D0C5F200049AAB /* PearlAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlAlert.h; sourceTree = "<group>"; };
-		F7526CD117D0C5F200049AAB /* PearlAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlAlert.m; sourceTree = "<group>"; };
 		F7526CF517D0C6B500049AAB /* PearlConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlConfig.h; sourceTree = "<group>"; };
 		F7526CF617D0C6B500049AAB /* PearlConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlConfig.m; sourceTree = "<group>"; };
 		F7526CF817D0C6EA00049AAB /* PearlDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlDeviceUtils.h; sourceTree = "<group>"; };
 		F7526CF917D0C6EA00049AAB /* PearlDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlDeviceUtils.m; sourceTree = "<group>"; };
-		F7526D2317D0C76200049AAB /* PearlSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlSheet.h; sourceTree = "<group>"; };
-		F7526D2417D0C76200049AAB /* PearlSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlSheet.m; sourceTree = "<group>"; };
-		F7526D7E17D0D8DD00049AAB /* PearlAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlAppDelegate.h; sourceTree = "<group>"; };
-		F7526D7F17D0D8DD00049AAB /* PearlAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlAppDelegate.m; sourceTree = "<group>"; };
 		F7526D8117D0D91C00049AAB /* PearlInfoPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlInfoPlist.h; sourceTree = "<group>"; };
 		F7526D8217D0D91C00049AAB /* PearlInfoPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlInfoPlist.m; sourceTree = "<group>"; };
-		F7526D8517D0D99600049AAB /* PearlUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlUIUtils.h; sourceTree = "<group>"; };
-		F7526D8617D0D99600049AAB /* PearlUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlUIUtils.m; sourceTree = "<group>"; };
-		F7526D8817D0D9D500049AAB /* PearlBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlBoxView.h; sourceTree = "<group>"; };
-		F7526D8917D0D9D500049AAB /* PearlBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlBoxView.m; sourceTree = "<group>"; };
-		F7526D9917D0DADF00049AAB /* UIImage+PearlScaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PearlScaling.h"; sourceTree = "<group>"; };
-		F7526D9A17D0DADF00049AAB /* UIImage+PearlScaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PearlScaling.m"; sourceTree = "<group>"; };
 		F7526D9C17D0DB0300049AAB /* PearlQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlQueue.h; sourceTree = "<group>"; };
 		F7526D9D17D0DB0300049AAB /* PearlQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlQueue.m; sourceTree = "<group>"; };
 		F7526DA817D0DCCA00049AAB /* PearlKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlKeyChain.h; sourceTree = "<group>"; };
@@ -114,6 +120,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7088C7F17D70FA800AA6787 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7088C8017D70FA800AA6787 /* Foundation.framework */,
+				F7088C8117D70FA800AA6787 /* CoreData.framework */,
+				F7088C8217D70FA800AA6787 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F7088CC517D71C0700AA6787 /* Fiorite-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F7088CD517D71D2900AA6787 /* UIKit */,
+				F7088CD917D71D7D00AA6787 /* FioriteIOSImports.h */,
+			);
+			name = "Fiorite-iOS";
+			sourceTree = "<group>";
+		};
+		F7088CD517D71D2900AA6787 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7088CD617D71D4E00AA6787 /* PearlAppDelegate.h */,
+				F7088CD717D71D4E00AA6787 /* PearlAppDelegate.m */,
+				F7088CC617D71C1900AA6787 /* PearlAlert.h */,
+				F7088CC717D71C1900AA6787 /* PearlAlert.m */,
+				F7088CC817D71C1900AA6787 /* PearlBoxView.h */,
+				F7088CC917D71C1900AA6787 /* PearlBoxView.m */,
+				F7088CCA17D71C1900AA6787 /* PearlSheet.h */,
+				F7088CCB17D71C1900AA6787 /* PearlSheet.m */,
+				F7088CCC17D71C1900AA6787 /* PearlUIUtils.h */,
+				F7088CCD17D71C1900AA6787 /* PearlUIUtils.m */,
+				F7088CCE17D71C1900AA6787 /* UIImage+PearlScaling.h */,
+				F7088CCF17D71C1900AA6787 /* UIImage+PearlScaling.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		F7526CCD17D0C5CF00049AAB /* WS */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,25 +202,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		F7526CCF17D0C5E400049AAB /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				F7526CD017D0C5F200049AAB /* PearlAlert.h */,
-				F7526CD117D0C5F200049AAB /* PearlAlert.m */,
-				F7526D2317D0C76200049AAB /* PearlSheet.h */,
-				F7526D2417D0C76200049AAB /* PearlSheet.m */,
-				F7526D7E17D0D8DD00049AAB /* PearlAppDelegate.h */,
-				F7526D7F17D0D8DD00049AAB /* PearlAppDelegate.m */,
-				F7526D8517D0D99600049AAB /* PearlUIUtils.h */,
-				F7526D8617D0D99600049AAB /* PearlUIUtils.m */,
-				F7526D8817D0D9D500049AAB /* PearlBoxView.h */,
-				F7526D8917D0D9D500049AAB /* PearlBoxView.m */,
-				F7526D9917D0DADF00049AAB /* UIImage+PearlScaling.h */,
-				F7526D9A17D0DADF00049AAB /* UIImage+PearlScaling.m */,
-			);
-			name = UIKit;
-			sourceTree = "<group>";
-		};
 		F7526DA717D0DCBD00049AAB /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C335D517D0A29700D0A7AE /* Fiorite */,
+				F7088CC517D71C0700AA6787 /* Fiorite-iOS */,
 				F7C335D617D0A29700D0A7AE /* Supporting Files */,
 				F7C335D217D0A29700D0A7AE /* Frameworks */,
 				F7C335D117D0A29700D0A7AE /* Products */,
@@ -212,6 +238,9 @@
 			children = (
 				F7C335D317D0A29700D0A7AE /* Foundation.framework */,
 				F2B1E050698147DEA8EA5396 /* libPods.a */,
+				F7088C7D17D70FA800AA6787 /* Cocoa.framework */,
+				F7088C8E17D70FA900AA6787 /* XCTest.framework */,
+				F7088C7F17D70FA800AA6787 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,7 +250,6 @@
 			children = (
 				F7526CCE17D0C5D800049AAB /* Core */,
 				F7526DA717D0DCBD00049AAB /* Crypto */,
-				F7526CCF17D0C5E400049AAB /* UIKit */,
 				F7526CCD17D0C5CF00049AAB /* WS */,
 				F7D73A4917D4A59500C0E907 /* PearlImports.h */,
 			);
@@ -323,28 +351,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7526D2517D0C76200049AAB /* PearlSheet.m in Sources */,
+				F7088CD817D71D4E00AA6787 /* PearlAppDelegate.m in Sources */,
+				F7088CD117D71C1900AA6787 /* PearlBoxView.m in Sources */,
 				F7526CA017D0C03100049AAB /* PearlCodeUtils.m in Sources */,
 				F7526DAA17D0DCCA00049AAB /* PearlKeyChain.m in Sources */,
 				F7526CA617D0C10500049AAB /* PearlStrings.m in Sources */,
 				F7526CCC17D0C54600049AAB /* NSObject+PearlExport.m in Sources */,
+				F7088CD417D71C1900AA6787 /* UIImage+PearlScaling.m in Sources */,
 				F7526CC617D0C4D500049AAB /* PearlWSController.m in Sources */,
 				F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */,
-				F7526D8717D0D99600049AAB /* PearlUIUtils.m in Sources */,
-				F7526D8A17D0D9D500049AAB /* PearlBoxView.m in Sources */,
 				F7526CC917D0C50B00049AAB /* NSString+PearlNSArrayFormat.m in Sources */,
-				F7526D9B17D0DADF00049AAB /* UIImage+PearlScaling.m in Sources */,
+				F7088CD017D71C1900AA6787 /* PearlAlert.m in Sources */,
 				F7526D8317D0D91C00049AAB /* PearlInfoPlist.m in Sources */,
 				F7526CF717D0C6B500049AAB /* PearlConfig.m in Sources */,
 				F7526CA917D0C14400049AAB /* PearlAbstractStrings.m in Sources */,
+				F7088CD217D71C1900AA6787 /* PearlSheet.m in Sources */,
 				F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */,
 				F7526CFA17D0C6EA00049AAB /* PearlDeviceUtils.m in Sources */,
 				F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */,
 				F7526D9E17D0DB0300049AAB /* PearlQueue.m in Sources */,
 				F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */,
+				F7088CD317D71C1900AA6787 /* PearlUIUtils.m in Sources */,
 				F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */,
-				F7526CD217D0C5F200049AAB /* PearlAlert.m in Sources */,
-				F7526D8017D0D8DD00049AAB /* PearlAppDelegate.m in Sources */,
 				F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
