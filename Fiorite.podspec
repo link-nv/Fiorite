@@ -1,20 +1,22 @@
 Pod::Spec.new do |s|
   s.name         = "Fiorite"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Components and utilities for iOS, based on the Pearl iOS library."
   s.homepage     = "https://github.com/link-nv/Fiorite"
   s.license      = { :type => 'LGPL v3', :file => 'LICENSE' }
   s.author       = { "Wim Vandenhaute" => "wim.vandenhaute@gmail.com" }
   s.platform     = :ios, '5.0'
-  s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.0.2" }
   
   s.ios.deployment_target = '5.0'
   s.ios.source_files  = 'Fiorite/Fiorite/*.{h,m}', 'Fiorite/Firote-iOS/*.{h,m}'
   s.ios.frameworks  = 'Security', 'MobileCoreServices', 'SystemConfiguration'
-  
+  s.ios.compiler_flags = '-DTARGET_OS_IPHONE=1'
+
   s.osx.deployment_target = '10.7'
   s.osx.frameworks = 'Security', 'CoreServices', 'SystemConfiguration'
   s.osx.source_files = 'Fiorite/Fiorite/*.{h,m}'
+  s.osx.compiler_flags = '-DTARGET_OS_IPHONE=0'
 
   s.requires_arc = true
 

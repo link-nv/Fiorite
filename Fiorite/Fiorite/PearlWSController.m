@@ -19,7 +19,6 @@
 #import "PearlWSController.h"
 #import "NSDictionary_JSONExtensions.h"
 #import "NSString+PearlNSArrayFormat.h"
-#import "PearlAlert.h"
 #import "PearlLogger.h"
 #import "PearlStringUtils.h"
 #import "CJSONSerializer.h"
@@ -28,6 +27,10 @@
 #import "PearlImports.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+
+#if TARGET_OS_IPHONE
+#import "PearlAlert.h"
+#endif
 
 #define JSON_NON_EXECUTABLE_PREFIX      @")]}'\n"
 

@@ -20,7 +20,7 @@
 #import <mach-o/ldsyms.h>
 #import "PearlImports.h"
 #if TARGET_OS_IPHONE
-#import "FioriteIOSImports.h"
+#import <UIKit/UIKit.h>
 #endif
 
 @implementation PearlDeviceUtils
