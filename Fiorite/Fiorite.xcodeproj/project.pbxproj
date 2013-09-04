@@ -15,6 +15,7 @@
 		F7088CD317D71C1900AA6787 /* PearlUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CCD17D71C1900AA6787 /* PearlUIUtils.m */; };
 		F7088CD417D71C1900AA6787 /* UIImage+PearlScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CCF17D71C1900AA6787 /* UIImage+PearlScaling.m */; };
 		F7088CD817D71D4E00AA6787 /* PearlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CD717D71D4E00AA6787 /* PearlAppDelegate.m */; };
+		F7088CDC17D7298700AA6787 /* PearlWSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CDB17D7298700AA6787 /* PearlWSStrings.m */; };
 		F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9517D0BDAE00049AAB /* PearlLogger.m */; };
 		F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */; };
 		F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */; };
@@ -69,6 +70,8 @@
 		F7088CD617D71D4E00AA6787 /* PearlAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PearlAppDelegate.h; path = "Fiorite-iOS/PearlAppDelegate.h"; sourceTree = "<group>"; };
 		F7088CD717D71D4E00AA6787 /* PearlAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PearlAppDelegate.m; path = "Fiorite-iOS/PearlAppDelegate.m"; sourceTree = "<group>"; };
 		F7088CD917D71D7D00AA6787 /* FioriteIOSImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FioriteIOSImports.h; path = "Fiorite-iOS/FioriteIOSImports.h"; sourceTree = "<group>"; };
+		F7088CDA17D7298700AA6787 /* PearlWSStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlWSStrings.h; sourceTree = "<group>"; };
+		F7088CDB17D7298700AA6787 /* PearlWSStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlWSStrings.m; sourceTree = "<group>"; };
 		F7526C9417D0BDAE00049AAB /* PearlLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlLogger.h; sourceTree = "<group>"; };
 		F7526C9517D0BDAE00049AAB /* PearlLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlLogger.m; sourceTree = "<group>"; };
 		F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlObjectUtils.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 			children = (
 				F7526CC417D0C4D500049AAB /* PearlWSController.h */,
 				F7526CC517D0C4D500049AAB /* PearlWSController.m */,
+				F7088CDA17D7298700AA6787 /* PearlWSStrings.h */,
+				F7088CDB17D7298700AA6787 /* PearlWSStrings.m */,
 			);
 			name = WS;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				F7526CFA17D0C6EA00049AAB /* PearlDeviceUtils.m in Sources */,
 				F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */,
 				F7526D9E17D0DB0300049AAB /* PearlQueue.m in Sources */,
+				F7088CDC17D7298700AA6787 /* PearlWSStrings.m in Sources */,
 				F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */,
 				F7088CD317D71C1900AA6787 /* PearlUIUtils.m in Sources */,
 				F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */,

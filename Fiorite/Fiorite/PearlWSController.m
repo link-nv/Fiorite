@@ -25,8 +25,6 @@
 #import "NSObject+PearlExport.h"
 #import <AFHTTPClient.h>
 #import "PearlImports.h"
-#import <SystemConfiguration/SystemConfiguration.h>
-#import <MobileCoreServices/MobileCoreServices.h>
 
 #if TARGET_OS_IPHONE
 #import "PearlAlert.h"
@@ -103,7 +101,6 @@
 
 - (void)reset {
     
-//    [ASIHTTPRequest clearSession];
     self.suppressOutdatedWarning = NO;
 }
 
@@ -210,7 +207,7 @@
     
     *response = nil;
     if (responseData == nil || !responseData.length) {
-#ifdef PEARL_UIKIT
+#if TARGET_OS_IPHONE
         if (popupOnError)
             [PearlAlert showError:[PearlWSStrings get].errorWSConnection];
 #endif
@@ -232,7 +229,7 @@
     NSDictionary *resultDictionary = [NSDictionary dictionaryWithJSONData:responseData error:&jsonError];
     if (jsonError != nil) {
         err(@"JSON: %@, for response:\n%@", jsonError, [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
-#ifdef PEARL_UIKIT
+#if TARGET_OS_IPHONE
         if (popupOnError)
             [PearlAlert showError:[PearlWSStrings get].errorWSResponseInvalid];
 #endif
@@ -240,7 +237,7 @@
     }
     *response = [[PearlJSONResult alloc] initWithDictionary:resultDictionary];
     if (!*response) {
-#ifdef PEARL_UIKIT
+#if TARGET_OS_IPHONE
         if (popupOnError)
             [PearlAlert showError:[PearlWSStrings get].errorWSResponseInvalid];
 #endif
@@ -248,7 +245,7 @@
     }
     
     // Check whether the client is up-to-date enough.
-#ifdef PEARL_UIKIT
+#if TARGET_OS_IPHONE
     if (popupOnError)
         if ((*response).outdated) {
             if ((*response).code == PearlJSONResultCodeUpdateRequired)
@@ -278,7 +275,7 @@
     if ((*response).code != PearlJSONResultCodeSuccess) {
         err(@"Result Code %d: %@", (*response).code, (*response).technicalDescription);
         
-#ifdef PEARL_UIKIT
+#if TARGET_OS_IPHONE
         if (popupOnError && (*response).code != PearlJSONResultCodeUpdateRequired) {
             NSString *errorMessage = (*response).userDescription;
             if (errorMessage && errorMessage.length) {
@@ -306,7 +303,7 @@
         if (!value) {
             err(@"Missing key: %@, in result: %@", nextKey, *response);
             
-#ifdef PEARL_UIKIT
+#if TARGET_OS_IPHONE
             if (popupOnError)
                 [PearlAlert showError:[PearlWSStrings get].errorWSResponseInvalid];
 #endif

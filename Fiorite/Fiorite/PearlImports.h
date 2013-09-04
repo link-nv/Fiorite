@@ -9,6 +9,7 @@
 #import "NSString+PearlSEL.h"
 #import "PearlLogger.h"
 #import "PearlStrings.h"
+#import "PearlWSStrings.h"
 #import "PearlStringUtils.h"
 #import "PearlCodeUtils.h"
 #import "PearlObjectUtils.h"
