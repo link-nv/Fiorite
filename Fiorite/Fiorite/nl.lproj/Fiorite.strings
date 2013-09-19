@@ -1,0 +1,54 @@
+/* 
+  Fiorite.strings
+  Fiorite
+
+  Created by Wim Vandenhaute on 19/09/13.
+  Copyright (c) 2013 Lin-k N.V. All rights reserved.
+*/
+/* Data and Units */
+"time.day.suffix"                           = "e";
+"time.day.suffix.one"                       = "ste";
+"time.day.suffix.two"                       = "de";
+"time.day.suffix.three"                     = "e";
+
+/* Resources */
+"font.size.small"                           = "18";
+"font.size.normal"                          = "34";
+"font.size.large"                           = "48";
+"font.family.default"                       = "Marker Felt";
+"font.family.fixed"                         = "American Typewriter";
+"font.family.symbolic"                      = "DejaVuSansMono";
+
+/* Menu Items */
+"song.sequential"                           = "Volgorde";
+"song.random"                               = "Willekeurig";
+"song.off"                                  = "Uit";
+
+/* Strings that are the same everywhere. */
+"common.title.notice"                       = "Informatie";
+"common.title.error"                        = "Fout";
+"common.button.okay"                        = "OK";
+"common.button.next"                        = "Volgende";
+"common.button.done"                        = "Klaar";
+"common.button.back"                        = "Terug";
+"common.button.retry"                       = "Nogmaals";
+"common.button.cancel"                      = "Annuleer";
+"common.button.continue"                    = "Ga Door";
+"common.button.abort"                       = "Hou Op";
+"common.button.upgrade"                     = "Upgraden";
+"common.button.yes"                         = "Ja";
+"common.button.no"                          = "Nee";
+"common.button.no.kind"                     = "Liever Niet";
+"common.button.save"                        = "Opslaan";
+"common.button.sure"                        = "Zeker!";
+"common.button.thanks"                      = "Bedankt";
+
+/* Review popup strings. */
+"review.title"                              = "Laat Je Horen";
+"review.message"                            =
+"Hopelijk heeft u genoten van\n%@!\
+\
+Het zou veel betekenen moest u deze versie kunnen reviewen.";
+"review.yes"                                = "Zeker!";
+"review.issue"                              = "Ik Heb Een Probleem";
+"review.no"                                 = "Nee, Bedankt";

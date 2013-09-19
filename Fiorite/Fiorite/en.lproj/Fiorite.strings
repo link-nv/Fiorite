@@ -1,0 +1,55 @@
+/* 
+  Fiorite.strings
+  Fiorite
+
+  Created by Wim Vandenhaute on 19/09/13.
+  Copyright (c) 2013 Lin-k N.V. All rights reserved.
+*/
+/* Data and Units */
+"time.day.suffix"                           = "th";
+"time.day.suffix.one"                       = "st";
+"time.day.suffix.two"                       = "nd";
+"time.day.suffix.three"                     = "rd";
+
+/* Resources */
+"font.size.small"                           = "18";
+"font.size.normal"                          = "34";
+"font.size.large"                           = "48";
+"font.family.default"                       = "Marker Felt";
+"font.family.fixed"                         = "American Typewriter";
+"font.family.symbolic"                      = "DejaVuSansMono";
+
+/* Menu Items */
+"song.sequential"                           = "Sequential";
+"song.random"                               = "Shuffle";
+"song.off"                                  = "Off";
+
+/* Strings that are the same everywhere. */
+"common.title.notice"                       = "Notice";
+"common.title.error"                        = "Error";
+"common.button.okay"                        = "Okay";
+"common.button.next"                        = "Next";
+"common.button.done"                        = "Done";
+"common.button.back"                        = "Back";
+"common.button.retry"                       = "Retry";
+"common.button.cancel"                      = "Cancel";
+"common.button.continue"                    = "Continue";
+"common.button.abort"                       = "Abort";
+"common.button.upgrade"                     = "Upgrade";
+"common.button.yes"                         = "Yes";
+"common.button.no"                          = "No";
+"common.button.no.kind"                     = "Rather Not";
+"common.button.save"                        = "Save";
+"common.button.sure"                        = "Sure!";
+"common.button.thanks"                      = "Thanks";
+
+/* Review popup strings. */
+"review.title"                              = "Speak Out";
+"review.message"                            =
+"We hope you've enjoyed using\n%@!\
+\
+It would mean a lot if you could review this version.";
+"review.yes"                                = "Sure, I'll Review!";
+"review.issue"                              = "I Have An Issue";
+"review.no"                                 = "No, Thanks";
+;

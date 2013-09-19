@@ -1,0 +1,54 @@
+/* 
+  Fiorite.strings
+  Fiorite
+
+  Created by Wim Vandenhaute on 19/09/13.
+  Copyright (c) 2013 Lin-k N.V. All rights reserved.
+*/
+/* Data and Units */
+"time.day.suffix" = "th";
+"time.day.suffix.one" = "st";
+"time.day.suffix.two" = "nd";
+"time.day.suffix.three" = "rd";
+
+/* Resources */
+"font.size.small" = "18";
+"font.size.normal" = "34";
+"font.size.large" = "48";
+"font.family.default" = "Marker Felt";
+"font.family.fixed" = "American Typewriter";
+"font.family.symbolic" = "DejaVuSansMono";
+
+/* Menu Items */
+"song.sequential" = "Séquentiel";
+"song.random" = "Mêler";
+"song.off" = "Off";
+
+/* Strings that are the same everywhere. */
+"common.title.notice" = "Info";
+"common.title.error" = "Erreur";
+"common.button.okay" = "Ok";
+"common.button.next" = "Prochain";
+"common.button.done" = "Fini";
+"common.button.back" = "Précédent";
+"common.button.retry" = "Réessayez";
+"common.button.cancel" = "Annuler";
+"common.button.continue" = "Continuer";
+"common.button.abort" = "Abandonner";
+"common.button.upgrade" = "Mise à jour";
+"common.button.yes" = "Oui";
+"common.button.no" = "Non";
+"common.button.no.kind" = "Plutôt pas";
+"common.button.save" = "Sauvegarder";
+"common.button.sure" = "Bien sûr!";
+"common.button.thanks" = "Merci";
+
+/* Review popup strings. */
+"review.title" = "Speak Out";
+"review.message" =
+"Nous espérons que vous avez apprécié \n%@!\
+\
+Cela signifierait beaucoup si vous pouviez examiner cette version.";
+"review.yes" = "Bien sûr!";
+"review.comment" = "Commentaire / Issue";
+"review.no" = "Non, merci";;
