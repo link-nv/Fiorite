@@ -107,10 +107,13 @@
 		F7C335D017D0A29700D0A7AE /* libFiorite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFiorite.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C335D317D0A29700D0A7AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7C335D717D0A29700D0A7AE /* Fiorite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fiorite-Prefix.pch"; sourceTree = "<group>"; };
-		F7D66CF517EAEB080015F727 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Fiorite.strings; sourceTree = "<group>"; };
-		F7D66CF717EAEB270015F727 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file; name = nl; path = nl.lproj/Fiorite.strings; sourceTree = "<group>"; };
-		F7D66CF817EAEB2B0015F727 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/Fiorite.strings; sourceTree = "<group>"; };
+		F7D66CF517EAEB080015F727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Fiorite.strings; sourceTree = "<group>"; };
+		F7D66CF717EAEB270015F727 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Fiorite.strings; sourceTree = "<group>"; };
+		F7D66CF817EAEB2B0015F727 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Fiorite.strings; sourceTree = "<group>"; };
 		F7D73A4917D4A59500C0E907 /* PearlImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlImports.h; sourceTree = "<group>"; };
+		F7EDA5BC17EB4329002E88EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/FioriteWS.strings; sourceTree = "<group>"; };
+		F7EDA5BE17EB432C002E88EE /* nl */ = {isa = PBXFileReference; lastKnownFileType = file; name = nl; path = nl.lproj/FioriteWS.strings; sourceTree = "<group>"; };
+		F7EDA5BF17EB432D002E88EE /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/FioriteWS.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +272,7 @@
 			children = (
 				F7C335D717D0A29700D0A7AE /* Fiorite-Prefix.pch */,
 				F7D66CF617EAEB080015F727 /* Fiorite.strings */,
+				F7EDA5BD17EB4329002E88EE /* FioriteWS.strings */,
 			);
 			name = "Supporting Files";
 			path = Fiorite;
@@ -400,6 +404,16 @@
 				F7D66CF817EAEB2B0015F727 /* fr */,
 			);
 			name = Fiorite.strings;
+			sourceTree = "<group>";
+		};
+		F7EDA5BD17EB4329002E88EE /* FioriteWS.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7EDA5BC17EB4329002E88EE /* en */,
+				F7EDA5BE17EB432C002E88EE /* nl */,
+				F7EDA5BF17EB432D002E88EE /* fr */,
+			);
+			name = FioriteWS.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

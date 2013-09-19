@@ -20,7 +20,7 @@
 
 - (id)init {
     
-    return [super initWithTable:@"Pearl"];
+    return [super initWithTable:@"Fiorite"];
 }
 
 + (instancetype)get {

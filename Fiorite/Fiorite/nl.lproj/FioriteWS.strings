@@ -1,0 +1,12 @@
+/* 
+  FioriteWS.strings
+  Fiorite
+
+  Created by Wim Vandenhaute on 19/09/13.
+  Copyright (c) 2013 Lin-k N.V. All rights reserved.
+*/
+"error.ws.connection"                       = "Kon de server niet vinden";
+"error.ws.response.invalid"                 = "Onverwacht antwoord van de server";
+"error.ws.response.failed"                  = "De operatie is niet gelukt";
+"error.ws.response.outdated.required"       = "Een nieuwe versie is beschikbaar.\nGelieve eerst te upgraden.";
+"error.ws.response.outdated.optional"       = "Een nieuwe versie is beschikbaar."

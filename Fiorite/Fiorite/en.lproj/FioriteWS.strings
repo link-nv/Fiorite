@@ -1,0 +1,13 @@
+/* 
+  FioriteWS.strings
+  Fiorite
+
+  Created by Wim Vandenhaute on 19/09/13.
+  Copyright (c) 2013 Lin-k N.V. All rights reserved.
+*/
+/* Strings that describe error conditions. */
+"error.ws.connection"                       = "Impossible de se connecter au serveur";
+"error.ws.response.invalid"                 = "Réponse du serveur incompatible";
+"error.ws.response.failed"                  = "L'opération a échoué.";
+"error.ws.response.outdated.required"       = "Une nouvelle version est disponible.\S'il vous plaît mise à niveau avant de procéder.";
+"error.ws.response.outdated.optional"       = "Une nouvelle version est disponible.";
