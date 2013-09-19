@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "Fiorite"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Components and utilities for iOS, based on the Pearl iOS library."
   s.homepage     = "https://github.com/link-nv/Fiorite"
   s.license      = { :type => 'LGPL v3', :file => 'LICENSE' }
   s.author       = { "Wim Vandenhaute" => "wim.vandenhaute@gmail.com" }
   s.platform     = :ios, '5.0'
-  s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.0.4" }
 
   s.resources    = ["Fiorite/Fiorite/*.lproj"]
 
