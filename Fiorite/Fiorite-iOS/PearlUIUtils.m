@@ -632,53 +632,61 @@ static NSMutableSet *dismissableResponders;
 
 - (UIView *)localizeProperties {
     
-    static NSArray *localizableProperties = nil;
-    if (localizableProperties == nil)
-        localizableProperties = [[NSArray alloc] initWithObjects:@"text", @"placeholder", nil];
-    
-    // Load localization for each of the view's supported properties.
-    for (NSString *localizableProperty in localizableProperties) {
-        if ([self respondsToSelector:NSSelectorFromString( localizableProperty )]) {
-            id value = [self valueForKey:localizableProperty];
-            if ([value isKindOfClass:[NSString class]])
-                [self setValue:[PearlUIUtils applyLocalization:value] forKey:localizableProperty];
+    @try {
+
+        static NSArray *localizableProperties = nil;
+        if (localizableProperties == nil)
+            localizableProperties = [[NSArray alloc] initWithObjects:@"text", @"placeholder", nil];
+        
+        // Load localization for each of the view's supported properties.
+        for (NSString *localizableProperty in localizableProperties) {
+            if ([self respondsToSelector:NSSelectorFromString( localizableProperty )]) {
+                id value = [self valueForKey:localizableProperty];
+                if ([value isKindOfClass:[NSString class]])
+                    [self setValue:[PearlUIUtils applyLocalization:value] forKey:localizableProperty];
+            }
         }
-    }
-    
-    // Handle certain types of view specially.
-    if ([self isKindOfClass:[UISegmentedControl class]]) {
-        UISegmentedControl *segmentView = (UISegmentedControl *)self;
         
-        // Localize titles of segments.
-        for (NSUInteger segment = 0; segment < [segmentView numberOfSegments]; ++segment)
-            [segmentView setTitle:[PearlUIUtils applyLocalization:[segmentView titleForSegmentAtIndex:segment]]
-                forSegmentAtIndex:segment];
-    }
-    if ([self isKindOfClass:[UIButton class]]) {
-        UIButton *button = (UIButton *)self;
-        
-        // Localize titles of segments.
-        UIControlState states[]
-        = { UIControlStateNormal, UIControlStateHighlighted, UIControlStateDisabled, UIControlStateSelected, UIControlStateApplication };
-        for (NSUInteger s = 0; s < 5; ++s) {
-            UIControlState state = states[s];
-            NSString *title = [button titleForState:state];
-            if (title)
-                [button setTitle:[PearlUIUtils applyLocalization:title] forState:state];
+        // Handle certain types of view specially.
+        if ([self isKindOfClass:[UISegmentedControl class]]) {
+            UISegmentedControl *segmentView = (UISegmentedControl *)self;
+            
+            // Localize titles of segments.
+            for (NSUInteger segment = 0; segment < [segmentView numberOfSegments]; ++segment)
+                [segmentView setTitle:[PearlUIUtils applyLocalization:[segmentView titleForSegmentAtIndex:segment]]
+                    forSegmentAtIndex:segment];
         }
-    }
-    if ([self isKindOfClass:[UITabBar class]]) {
-        UITabBar *tabBar = (UITabBar *)self;
+        if ([self isKindOfClass:[UIButton class]]) {
+            UIButton *button = (UIButton *)self;
+            
+            // Localize titles of segments.
+            UIControlState states[]
+            = { UIControlStateNormal, UIControlStateHighlighted, UIControlStateDisabled, UIControlStateSelected, UIControlStateApplication };
+            for (NSUInteger s = 0; s < 5; ++s) {
+                UIControlState state = states[s];
+                NSString *title = [button titleForState:state];
+                if (title)
+                    [button setTitle:[PearlUIUtils applyLocalization:title] forState:state];
+            }
+        }
+        if ([self isKindOfClass:[UITabBar class]]) {
+            UITabBar *tabBar = (UITabBar *)self;
+            
+            for (UITabBarItem *item in tabBar.items)
+                item.title = [PearlUIUtils applyLocalization:item.title];
+        }
         
-        for (UITabBarItem *item in tabBar.items)
-            item.title = [PearlUIUtils applyLocalization:item.title];
+        // Load localization for all children, too.
+        for (UIView *childView in self.subviews)
+            [childView localizeProperties];
+        
+        return self;
+        
     }
-    
-    // Load localization for all children, too.
-    for (UIView *childView in self.subviews)
-        [childView localizeProperties];
-    
-    return self;
+    @catch (NSException *exception) {
+        err(@"Exception: %@", exception.description);
+    }
+
 }
 
 @end

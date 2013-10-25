@@ -34,6 +34,7 @@
 		F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526DAC17D0DCF200049AAB /* PearlCryptUtils.m */; };
 		F7963D9F17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F7963D9E17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m */; };
 		F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D317D0A29700D0A7AE /* Foundation.framework */; };
+		F7F366F8181AB9D70043960D /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F366F7181AB9D70043960D /* NSString+HTML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,6 +118,8 @@
 		F7EDA5BC17EB4329002E88EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FioriteWS.strings; sourceTree = "<group>"; };
 		F7EDA5BE17EB432C002E88EE /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/FioriteWS.strings; sourceTree = "<group>"; };
 		F7EDA5BF17EB432D002E88EE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FioriteWS.strings; sourceTree = "<group>"; };
+		F7F366F6181AB9D70043960D /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		F7F366F7181AB9D70043960D /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +217,8 @@
 				F7526D9D17D0DB0300049AAB /* PearlQueue.m */,
 				F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */,
 				F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */,
+				F7F366F6181AB9D70043960D /* NSString+HTML.h */,
+				F7F366F7181AB9D70043960D /* NSString+HTML.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				F7088CD217D71C1900AA6787 /* PearlSheet.m in Sources */,
 				F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */,
 				F7526CFA17D0C6EA00049AAB /* PearlDeviceUtils.m in Sources */,
+				F7F366F8181AB9D70043960D /* NSString+HTML.m in Sources */,
 				F7526CA317D0C0D300049AAB /* PearlStringUtils.m in Sources */,
 				F7526D9E17D0DB0300049AAB /* PearlQueue.m in Sources */,
 				F7088CDC17D7298700AA6787 /* PearlWSStrings.m in Sources */,
