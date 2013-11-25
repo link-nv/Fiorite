@@ -184,6 +184,20 @@ uint64_t PearlSecureRandom() {
     return [self wrapAt:64];
 }
 
+- (NSMutableDictionary *) parseQueryString {
+    
+    NSMutableDictionary *queryStringDictionary = [[NSMutableDictionary alloc] init];
+    NSArray *urlComponents = [self componentsSeparatedByString:@"&"];
+    for (NSString *keyValuePair in urlComponents) {
+        NSArray *pairComponents = [keyValuePair componentsSeparatedByString:@"="];
+        NSString *key = [pairComponents objectAtIndex:0];
+        NSString *value = [pairComponents objectAtIndex:1];
+        
+        [queryStringDictionary setObject:[value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] forKey:key];
+    }
+    return queryStringDictionary;
+}
+
 @end
 
 @implementation NSData(PearlCodeUtils)

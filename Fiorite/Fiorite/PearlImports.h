@@ -20,3 +20,5 @@
 #import "PearlQueue.h"
 #import "PearlKeyChain.h"
 #import "NSObject+PearlKVO.h"
+#import "PearlXCallback.h"
+#import "NSURL+Additions.h"

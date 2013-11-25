@@ -53,6 +53,8 @@ __END_DECLS
 - (NSString *)wrapForMIME;
 - (NSString *)wrapForPEM;
 
+- (NSMutableDictionary *) parseQueryString;
+
 @end
 
 @interface NSData(PearlCodeUtils)

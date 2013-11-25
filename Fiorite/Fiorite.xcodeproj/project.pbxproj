@@ -32,6 +32,8 @@
 		F7526D9E17D0DB0300049AAB /* PearlQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526D9D17D0DB0300049AAB /* PearlQueue.m */; };
 		F7526DAA17D0DCCA00049AAB /* PearlKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526DA917D0DCCA00049AAB /* PearlKeyChain.m */; };
 		F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526DAC17D0DCF200049AAB /* PearlCryptUtils.m */; };
+		F77759C01843832000E1D03C /* NSURL+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F77759BF1843832000E1D03C /* NSURL+Additions.m */; };
+		F77759C6184396D800E1D03C /* PearlXCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F77759C5184396D800E1D03C /* PearlXCallback.m */; };
 		F7963D9F17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F7963D9E17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m */; };
 		F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D317D0A29700D0A7AE /* Foundation.framework */; };
 		F7F366F8181AB9D70043960D /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F366F7181AB9D70043960D /* NSString+HTML.m */; };
@@ -106,6 +108,10 @@
 		F7526DA917D0DCCA00049AAB /* PearlKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlKeyChain.m; sourceTree = "<group>"; };
 		F7526DAB17D0DCF200049AAB /* PearlCryptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlCryptUtils.h; sourceTree = "<group>"; };
 		F7526DAC17D0DCF200049AAB /* PearlCryptUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlCryptUtils.m; sourceTree = "<group>"; };
+		F77759BE1843832000E1D03C /* NSURL+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Additions.h"; sourceTree = "<group>"; };
+		F77759BF1843832000E1D03C /* NSURL+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Additions.m"; sourceTree = "<group>"; };
+		F77759C4184396D800E1D03C /* PearlXCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlXCallback.h; sourceTree = "<group>"; };
+		F77759C5184396D800E1D03C /* PearlXCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlXCallback.m; sourceTree = "<group>"; };
 		F7963D9D17F3060B006ADD55 /* UILabel+MultiLineAutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+MultiLineAutoSize.h"; path = "Fiorite-iOS/UILabel+MultiLineAutoSize.h"; sourceTree = "<group>"; };
 		F7963D9E17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+MultiLineAutoSize.m"; path = "Fiorite-iOS/UILabel+MultiLineAutoSize.m"; sourceTree = "<group>"; };
 		F7C335D017D0A29700D0A7AE /* libFiorite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFiorite.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +225,10 @@
 				F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */,
 				F7F366F6181AB9D70043960D /* NSString+HTML.h */,
 				F7F366F7181AB9D70043960D /* NSString+HTML.m */,
+				F77759BE1843832000E1D03C /* NSURL+Additions.h */,
+				F77759BF1843832000E1D03C /* NSURL+Additions.m */,
+				F77759C4184396D800E1D03C /* PearlXCallback.h */,
+				F77759C5184396D800E1D03C /* PearlXCallback.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -399,6 +409,8 @@
 				F7526D9E17D0DB0300049AAB /* PearlQueue.m in Sources */,
 				F7088CDC17D7298700AA6787 /* PearlWSStrings.m in Sources */,
 				F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */,
+				F77759C01843832000E1D03C /* NSURL+Additions.m in Sources */,
+				F77759C6184396D800E1D03C /* PearlXCallback.m in Sources */,
 				F7088CD317D71C1900AA6787 /* PearlUIUtils.m in Sources */,
 				F7526DAD17D0DCF200049AAB /* PearlCryptUtils.m in Sources */,
 				F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */,
