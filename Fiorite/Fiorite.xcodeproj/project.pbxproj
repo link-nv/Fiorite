@@ -36,6 +36,7 @@
 		F77759C6184396D800E1D03C /* PearlXCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F77759C5184396D800E1D03C /* PearlXCallback.m */; };
 		F7963D9F17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F7963D9E17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m */; };
 		F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C335D317D0A29700D0A7AE /* Foundation.framework */; };
+		F7F2D5A318BE3C0900DD4D9B /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2D5A218BE3C0900DD4D9B /* NSString+Email.m */; };
 		F7F366F8181AB9D70043960D /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F366F7181AB9D70043960D /* NSString+HTML.m */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		F7EDA5BC17EB4329002E88EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FioriteWS.strings; sourceTree = "<group>"; };
 		F7EDA5BE17EB432C002E88EE /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/FioriteWS.strings; sourceTree = "<group>"; };
 		F7EDA5BF17EB432D002E88EE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FioriteWS.strings; sourceTree = "<group>"; };
+		F7F2D5A118BE3C0900DD4D9B /* NSString+Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Email.h"; sourceTree = "<group>"; };
+		F7F2D5A218BE3C0900DD4D9B /* NSString+Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Email.m"; sourceTree = "<group>"; };
 		F7F366F6181AB9D70043960D /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		F7F366F7181AB9D70043960D /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,40 +198,42 @@
 		F7526CCE17D0C5D800049AAB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				F7526C9417D0BDAE00049AAB /* PearlLogger.h */,
-				F7526C9517D0BDAE00049AAB /* PearlLogger.m */,
-				F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */,
-				F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */,
-				F7526C9A17D0BEB800049AAB /* NSString+PearlSEL.h */,
-				F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */,
-				F7526C9E17D0C03100049AAB /* PearlCodeUtils.h */,
-				F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */,
-				F7526CA117D0C0D300049AAB /* PearlStringUtils.h */,
-				F7526CA217D0C0D300049AAB /* PearlStringUtils.m */,
-				F7526CA417D0C10500049AAB /* PearlStrings.h */,
-				F7526CA517D0C10500049AAB /* PearlStrings.m */,
-				F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */,
-				F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */,
-				F7526CC717D0C50B00049AAB /* NSString+PearlNSArrayFormat.h */,
-				F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */,
 				F7526CCA17D0C54600049AAB /* NSObject+PearlExport.h */,
 				F7526CCB17D0C54600049AAB /* NSObject+PearlExport.m */,
+				F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */,
+				F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */,
+				F7F366F6181AB9D70043960D /* NSString+HTML.h */,
+				F7F366F7181AB9D70043960D /* NSString+HTML.m */,
+				F7526CC717D0C50B00049AAB /* NSString+PearlNSArrayFormat.h */,
+				F7526CC817D0C50B00049AAB /* NSString+PearlNSArrayFormat.m */,
+				F7526C9A17D0BEB800049AAB /* NSString+PearlSEL.h */,
+				F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */,
+				F77759BE1843832000E1D03C /* NSURL+Additions.h */,
+				F77759BF1843832000E1D03C /* NSURL+Additions.m */,
+				F7526CA717D0C14400049AAB /* PearlAbstractStrings.h */,
+				F7526CA817D0C14400049AAB /* PearlAbstractStrings.m */,
+				F7526C9E17D0C03100049AAB /* PearlCodeUtils.h */,
+				F7526C9F17D0C03100049AAB /* PearlCodeUtils.m */,
 				F7526CF517D0C6B500049AAB /* PearlConfig.h */,
 				F7526CF617D0C6B500049AAB /* PearlConfig.m */,
 				F7526CF817D0C6EA00049AAB /* PearlDeviceUtils.h */,
 				F7526CF917D0C6EA00049AAB /* PearlDeviceUtils.m */,
 				F7526D8117D0D91C00049AAB /* PearlInfoPlist.h */,
 				F7526D8217D0D91C00049AAB /* PearlInfoPlist.m */,
+				F7526C9417D0BDAE00049AAB /* PearlLogger.h */,
+				F7526C9517D0BDAE00049AAB /* PearlLogger.m */,
+				F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */,
+				F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */,
 				F7526D9C17D0DB0300049AAB /* PearlQueue.h */,
 				F7526D9D17D0DB0300049AAB /* PearlQueue.m */,
-				F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */,
-				F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */,
-				F7F366F6181AB9D70043960D /* NSString+HTML.h */,
-				F7F366F7181AB9D70043960D /* NSString+HTML.m */,
-				F77759BE1843832000E1D03C /* NSURL+Additions.h */,
-				F77759BF1843832000E1D03C /* NSURL+Additions.m */,
+				F7526CA417D0C10500049AAB /* PearlStrings.h */,
+				F7526CA517D0C10500049AAB /* PearlStrings.m */,
+				F7526CA117D0C0D300049AAB /* PearlStringUtils.h */,
+				F7526CA217D0C0D300049AAB /* PearlStringUtils.m */,
 				F77759C4184396D800E1D03C /* PearlXCallback.h */,
 				F77759C5184396D800E1D03C /* PearlXCallback.m */,
+				F7F2D5A118BE3C0900DD4D9B /* NSString+Email.h */,
+				F7F2D5A218BE3C0900DD4D9B /* NSString+Email.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				F7526CCC17D0C54600049AAB /* NSObject+PearlExport.m in Sources */,
 				F7088CD417D71C1900AA6787 /* UIImage+PearlScaling.m in Sources */,
 				F7526CC617D0C4D500049AAB /* PearlWSController.m in Sources */,
+				F7F2D5A318BE3C0900DD4D9B /* NSString+Email.m in Sources */,
 				F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */,
 				F7963D9F17F3060B006ADD55 /* UILabel+MultiLineAutoSize.m in Sources */,
 				F7526CC917D0C50B00049AAB /* NSString+PearlNSArrayFormat.m in Sources */,
