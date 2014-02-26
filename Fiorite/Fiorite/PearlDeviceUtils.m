@@ -65,7 +65,11 @@
 
 + (BOOL)isIPad {
     
+#if TARGET_OS_IPHONE
     return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+#else
+    return NO;
+#endif
 }
 
 + (BOOL)isIPhone {
@@ -75,17 +79,29 @@
 
 + (BOOL) isLandscape {
     
+#if TARGET_OS_IPHONE
     return [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft || [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight;
+#else
+    return NO;
+#endif
 }
 
 + (BOOL) is4inch {
     
+#if TARGET_OS_IPHONE
     return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
+#else
+    return NO;
+#endif
 }
 
 + (BOOL) hasCamera {
     
+#if TARGET_OS_IPHONE
     return ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]);
+#else
+    return NO;
+#endif
 }
 
 
