@@ -65,13 +65,29 @@
 
 + (BOOL)isIPad {
     
-    return [[self platform] hasPrefix:@"iPad"];
+    return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
 }
 
 + (BOOL)isIPhone {
     
     return [[self platform] hasPrefix:@"iPhone"];
 }
+
++ (BOOL) isLandscape {
+    
+    return [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft || [[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight;
+}
+
++ (BOOL) is4inch {
+    
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
+}
+
++ (BOOL) hasCamera {
+    
+    return ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]);
+}
+
 
 + (BOOL)isSimulator {
     

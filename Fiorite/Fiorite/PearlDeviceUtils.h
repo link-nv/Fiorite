@@ -39,6 +39,10 @@
 /** YES when invoked on the iPhone simulator. */
 + (BOOL)isSimulator;
 
++ (BOOL) isLandscape;
++ (BOOL) is4inch;
++ (BOOL) hasCamera;
+
 /** The scale difference of the device's user interface in comparison to an iPhone UI. */
 + (float)uiScale;
 
