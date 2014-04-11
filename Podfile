@@ -1,7 +1,7 @@
-platform :ios, '5.0'
+platform :ios, '6.0'
 xcodeproj 'Fiorite/Fiorite.xcodeproj'
 
-pod "AFNetworking",         "~>1.3.2"
+pod "AFNetworking",         "~>2.2.1"
 pod "Reachability",         "~>3.1.0"
 pod "TouchJSON",            "~>1.1"
 pod "JRSwizzle",            "~>1.0"

@@ -522,7 +522,7 @@
 				DSTROOT = /tmp/Fiorite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fiorite/Fiorite-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/AFNetworking\"  \"${PODS_ROOT}/BuildHeaders/JRSwizzle\" \"${PODS_ROOT}/BuildHeaders/Reachability\" \"${PODS_ROOT}/BuildHeaders/TouchJSON\" \"${PODS_ROOT}/BuildHeaders/UIColor-Utilities\"";
@@ -540,7 +540,7 @@
 				DSTROOT = /tmp/Fiorite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fiorite/Fiorite-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/AFNetworking\"  \"${PODS_ROOT}/BuildHeaders/JRSwizzle\" \"${PODS_ROOT}/BuildHeaders/Reachability\" \"${PODS_ROOT}/BuildHeaders/TouchJSON\" \"${PODS_ROOT}/BuildHeaders/UIColor-Utilities\"";

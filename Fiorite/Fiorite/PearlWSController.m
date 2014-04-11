@@ -23,7 +23,7 @@
 #import "PearlStringUtils.h"
 #import "CJSONSerializer.h"
 #import "NSObject+PearlExport.h"
-#import <AFHTTPClient.h>
+#import <AFHTTPRequestOperationManager.h>
 #import "PearlImports.h"
 
 #if TARGET_OS_IPHONE
@@ -94,9 +94,11 @@
     return NO;
 }
 
-- (AFURLConnectionOperationSSLPinningMode) sslPinningMode {
-    
-    return AFSSLPinningModePublicKey;
+- (AFSecurityPolicy *) securityPolicy {
+
+    AFSecurityPolicy *policy = [AFSecurityPolicy defaultPolicy];
+    policy.SSLPinningMode = AFSSLPinningModePublicKey;
+    return policy;
 }
 
 - (void)reset {
@@ -108,12 +110,13 @@
                                completion:(void (^)(NSData *responseData, NSError *connectionError))completion {
     
     trc(@"Out to %@, method: %d:\n%@", [self serverURL], method, parameters);
+
+    AFHTTPRequestOperationManager *httpClient = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:self.serverURL];
+    httpClient.responseSerializer = [AFHTTPResponseSerializer serializer];
+    httpClient.securityPolicy = [self securityPolicy];
     
     switch (method) {
         case PearlWSRequestMethodGET_REST: {
-
-            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
-            httpClient.defaultSSLPinningMode = self.sslPinningMode;
 
             NSMutableString *urlString = [[self.serverURL absoluteString] mutableCopy];
             BOOL hasQuery = [urlString rangeOfString:@"?"].location != NSNotFound;
@@ -130,58 +133,48 @@
              [REQUEST_KEY_VERSION encodeURL],
              [[PearlConfig get].build encodeURL]];
             
-            [httpClient getPath:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
+            [httpClient GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                // on success
                 completion(responseObject, nil);
-
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
+                // on failure
                 completion(nil, error);
             }];
-
+            
             break;
         }
         case PearlWSRequestMethodPOST_REST: {
-
-            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
-            httpClient.defaultSSLPinningMode = self.sslPinningMode;
-            
+           
             NSMutableDictionary *postParameters = [[NSMutableDictionary alloc] initWithCapacity:parameters.count + 1];
             for( NSString *key in [parameters allKeys]) {
                 id value = [parameters objectForKey:key];
                 [postParameters setObject:value forKey:key];
             }
             [postParameters setObject:[PearlConfig get].build forKey:REQUEST_KEY_VERSION];
-            
-            [httpClient postPath:[self.serverURL absoluteString] parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
+            [httpClient POST:[self.serverURL absoluteString] parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                // on success
                 completion(responseObject, nil);
-
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
+                // on failure
                 completion(nil, error);
-                
             }];
             
             break;
         }
         case PearlWSRequestMethodPOST_JSON: {
             
-            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.serverURL];
-            httpClient.defaultSSLPinningMode = self.sslPinningMode;
-
-            [httpClient setParameterEncoding:AFJSONParameterEncoding];
+            NSMutableURLRequest *urlRequest = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:[self.serverURL absoluteString] parameters:parameters error:nil];
             
-            [httpClient postPath:[self.serverURL absoluteString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                
+            AFHTTPRequestOperation * operation = [httpClient HTTPRequestOperationWithRequest:urlRequest success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                // on success
                 completion(responseObject, nil);
-                
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                
+                // on failure
                 completion(nil, error);
-                
             }];
-            
+            [httpClient.operationQueue addOperation:operation];
+           
             break;
         }
     }

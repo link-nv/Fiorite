@@ -12,3 +12,4 @@
 #import "PearlBoxView.h"
 #import "PearlUIUtils.h"
 #import "UIImage+PearlScaling.h"
+#import "NSString+Email.h"

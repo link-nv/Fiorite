@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFURLConnectionOperation.h"
+#import <AFSecurityPolicy.h>
 
 __BEGIN_DECLS
 typedef enum {
@@ -142,10 +142,9 @@ __END_DECLS
 - (BOOL)isSynchronous;
 
 /**
- * Override SSL Pinning mode, default is AFSSLPinningModePublicKey.
- * Provide your SSL certificate, DER encoded in your app bundle with a .cer extension.
+ * Override the default AFSecurityPolicy, default is public key pinning, keys provided using a set of DER encoded SSL certificates bundled with a .cer extension
  */
-- (AFURLConnectionOperationSSLPinningMode) sslPinningMode;
+- (AFSecurityPolicy *) securityPolicy;
 
 @end
 
