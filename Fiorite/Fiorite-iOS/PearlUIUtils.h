@@ -54,6 +54,15 @@ extern CGFloat DistanceBetweenCGPointsSq(CGPoint from, CGPoint to);
 extern CGFloat DistanceBetweenCGPoints(CGPoint from, CGPoint to);
 __END_DECLS
 
+@protocol PearlUILocalizationDelegate <NSObject>
+
+@required
+
+- (NSString *) localizationValueFor:(NSString *)localizationKey;
+
+@end
+
+
 @interface UIImage(PearlUIUtils)
 
 /**
@@ -179,7 +188,7 @@ __END_DECLS
  *
  * See applyLocalization for the rules of localization expansion.
  */
-- (UIView *)localizeProperties;
+- (UIView *)localizeProperties:(id<PearlUILocalizationDelegate>)delegate;
 
 @end
 
@@ -188,7 +197,7 @@ __END_DECLS
 /**
  * Expands localization keys to values in the given view controller's properties and view hierarchy.
  */
-- (UIViewController *)localizeProperties;
+- (UIViewController *)localizeProperties:(id<PearlUILocalizationDelegate>)delegate;
 
 @end
 
@@ -225,8 +234,11 @@ __END_DECLS
  * for the key.
  *
  * Values that do not abide by this syntax are returned untouched.
+ *
+ * If the delegate is not nil, first will ask the delegate for the localization value, else lookup in .strings
+ *
  */
-+ (NSString *)applyLocalization:(NSString *)localizableValue;
++ (NSString *)applyLocalization:(NSString *)localizableValue withDelegate:(id<PearlUILocalizationDelegate>)delegate;
 
 @end
 

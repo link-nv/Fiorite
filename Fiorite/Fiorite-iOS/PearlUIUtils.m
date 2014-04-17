@@ -630,7 +630,7 @@ static NSMutableSet *dismissableResponders;
     return copy;
 }
 
-- (UIView *)localizeProperties {
+- (UIView *)localizeProperties:(id<PearlUILocalizationDelegate>)delegate {
     
     @try {
 
@@ -643,7 +643,7 @@ static NSMutableSet *dismissableResponders;
             if ([self respondsToSelector:NSSelectorFromString( localizableProperty )]) {
                 id value = [self valueForKey:localizableProperty];
                 if ([value isKindOfClass:[NSString class]])
-                    [self setValue:[PearlUIUtils applyLocalization:value] forKey:localizableProperty];
+                    [self setValue:[PearlUIUtils applyLocalization:value withDelegate:delegate] forKey:localizableProperty];
             }
         }
         
@@ -653,7 +653,7 @@ static NSMutableSet *dismissableResponders;
             
             // Localize titles of segments.
             for (NSUInteger segment = 0; segment < [segmentView numberOfSegments]; ++segment)
-                [segmentView setTitle:[PearlUIUtils applyLocalization:[segmentView titleForSegmentAtIndex:segment]]
+                [segmentView setTitle:[PearlUIUtils applyLocalization:[segmentView titleForSegmentAtIndex:segment] withDelegate:delegate]
                     forSegmentAtIndex:segment];
         }
         if ([self isKindOfClass:[UIButton class]]) {
@@ -666,19 +666,19 @@ static NSMutableSet *dismissableResponders;
                 UIControlState state = states[s];
                 NSString *title = [button titleForState:state];
                 if (title)
-                    [button setTitle:[PearlUIUtils applyLocalization:title] forState:state];
+                    [button setTitle:[PearlUIUtils applyLocalization:title withDelegate:delegate] forState:state];
             }
         }
         if ([self isKindOfClass:[UITabBar class]]) {
             UITabBar *tabBar = (UITabBar *)self;
             
             for (UITabBarItem *item in tabBar.items)
-                item.title = [PearlUIUtils applyLocalization:item.title];
+                item.title = [PearlUIUtils applyLocalization:item.title withDelegate:delegate];
         }
         
         // Load localization for all children, too.
         for (UIView *childView in self.subviews)
-            [childView localizeProperties];
+            [childView localizeProperties:delegate];
         
         return self;
         
@@ -693,28 +693,28 @@ static NSMutableSet *dismissableResponders;
 
 @implementation UIViewController(PearlUIUtils)
 
-- (UIViewController *)localizeProperties {
+- (UIViewController *)localizeProperties:(id<PearlUILocalizationDelegate>)delegate {
     
     // VC properties
-    self.title = [PearlUIUtils applyLocalization:self.title];
-    self.navigationItem.title = [PearlUIUtils applyLocalization:self.navigationItem.title];
-    [self.navigationItem.titleView localizeProperties];
+    self.title = [PearlUIUtils applyLocalization:self.title withDelegate:delegate];
+    self.navigationItem.title = [PearlUIUtils applyLocalization:self.navigationItem.title withDelegate:delegate];
+    [self.navigationItem.titleView localizeProperties:delegate];
     
     // Toolbar items
     for (UIBarButtonItem *item in [self toolbarItems]) {
         NSSet *titles = [item possibleTitles];
         NSMutableSet *localizedTitles = [NSMutableSet setWithCapacity:[titles count]];
         for (NSString *title in titles)
-            [localizedTitles addObject:[PearlUIUtils applyLocalization:title]];
+            [localizedTitles addObject:[PearlUIUtils applyLocalization:title withDelegate:delegate]];
         [item setPossibleTitles:localizedTitles];
     }
     
     // VC view hierarchy
-    [self.view localizeProperties];
+    [self.view localizeProperties:delegate];
     
     // Child VCs
     for (UIViewController *vc in [self childViewControllers])
-        [vc localizeProperties];
+        [vc localizeProperties:delegate];
     
     return self;
 }
@@ -905,7 +905,7 @@ static NSMutableSet *dismissableResponders;
     } );
 }
 
-+ (NSString *)applyLocalization:(NSString *)localizableValue {
++ (NSString *)applyLocalization:(NSString *)localizableValue withDelegate:(id<PearlUILocalizationDelegate>)delegate {
     
     if (!localizableValue)
         return nil;
@@ -925,15 +925,23 @@ static NSMutableSet *dismissableResponders;
                                NSMakeRange( NSNotFound, 0 ) ))
                  return;
              
-             NSString *localizationKey
-             = [localizableValue substringWithRange:localizationKeyRange];
-             NSString *defaultValue = nil;
-             if (!NSEqualRanges( defaultValueRange,
-                                NSMakeRange( NSNotFound, 0 ) ))
-                 defaultValue = [localizableValue substringWithRange:defaultValueRange];
+             NSString *localizationKey = [localizableValue substringWithRange:localizationKeyRange];
              
-             localizedValue
-             = NSLocalizedStringWithDefaultValue(localizationKey, nil, [NSBundle mainBundle], defaultValue, nil);
+             // first ask the delegate if not nil
+             if (nil != delegate) {
+                 localizedValue = [delegate localizationValueFor:localizationKey];
+             }
+             
+             // default
+             if (nil == localizedValue) {
+             
+                 NSString *defaultValue = nil;
+                 if (!NSEqualRanges( defaultValueRange,
+                                    NSMakeRange( NSNotFound, 0 ) ))
+                     defaultValue = [localizableValue substringWithRange:defaultValueRange];
+                 
+                 localizedValue = NSLocalizedStringWithDefaultValue(localizationKey, nil, [NSBundle mainBundle], defaultValue, nil);
+             }
          }
      }];
     
