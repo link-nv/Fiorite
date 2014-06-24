@@ -25,6 +25,7 @@
 #import "NSObject+PearlExport.h"
 #import <AFHTTPRequestOperationManager.h>
 #import "PearlImports.h"
+#import <AFHTTPRequestOperationManager+Timeout.h>
 
 #if TARGET_OS_IPHONE
 #import "PearlAlert.h"
@@ -101,6 +102,11 @@
     return policy;
 }
 
+- (NSTimeInterval)timeoutInterval {
+    
+    return 60;
+}
+
 - (void)reset {
     
     self.suppressOutdatedWarning = NO;
@@ -133,7 +139,7 @@
              [REQUEST_KEY_VERSION encodeURL],
              [[PearlConfig get].build encodeURL]];
             
-            [httpClient GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [httpClient GET:urlString timeoutInterval:self.timeoutInterval parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 // on success
                 completion(responseObject, nil);
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -152,7 +158,7 @@
             }
             [postParameters setObject:[PearlConfig get].build forKey:REQUEST_KEY_VERSION];
 
-            [httpClient POST:[self.serverURL absoluteString] parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [httpClient POST:[self.serverURL absoluteString] timeoutInterval:self.timeoutInterval parameters:postParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 // on success
                 completion(responseObject, nil);
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -165,6 +171,7 @@
         case PearlWSRequestMethodPOST_JSON: {
             
             NSMutableURLRequest *urlRequest = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:[self.serverURL absoluteString] parameters:parameters error:nil];
+            urlRequest.timeoutInterval = self.timeoutInterval;
             
             AFHTTPRequestOperation * operation = [httpClient HTTPRequestOperationWithRequest:urlRequest success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 // on success

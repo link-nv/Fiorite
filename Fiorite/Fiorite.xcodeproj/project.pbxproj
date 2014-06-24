@@ -16,6 +16,7 @@
 		F7088CD417D71C1900AA6787 /* UIImage+PearlScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CCF17D71C1900AA6787 /* UIImage+PearlScaling.m */; };
 		F7088CD817D71D4E00AA6787 /* PearlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CD717D71D4E00AA6787 /* PearlAppDelegate.m */; };
 		F7088CDC17D7298700AA6787 /* PearlWSStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CDB17D7298700AA6787 /* PearlWSStrings.m */; };
+		F72FE3E119582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = F72FE3E019582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.m */; };
 		F7526C9617D0BDAE00049AAB /* PearlLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9517D0BDAE00049AAB /* PearlLogger.m */; };
 		F7526C9917D0BE5400049AAB /* PearlObjectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9817D0BE5400049AAB /* PearlObjectUtils.m */; };
 		F7526C9C17D0BEB800049AAB /* NSString+PearlSEL.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526C9B17D0BEB800049AAB /* NSString+PearlSEL.m */; };
@@ -77,6 +78,8 @@
 		F7088CD917D71D7D00AA6787 /* FioriteIOSImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FioriteIOSImports.h; path = "Fiorite-iOS/FioriteIOSImports.h"; sourceTree = "<group>"; };
 		F7088CDA17D7298700AA6787 /* PearlWSStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlWSStrings.h; sourceTree = "<group>"; };
 		F7088CDB17D7298700AA6787 /* PearlWSStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlWSStrings.m; sourceTree = "<group>"; };
+		F72FE3DF19582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+Timeout.h"; sourceTree = "<group>"; };
+		F72FE3E019582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+Timeout.m"; sourceTree = "<group>"; };
 		F7526C9417D0BDAE00049AAB /* PearlLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlLogger.h; sourceTree = "<group>"; };
 		F7526C9517D0BDAE00049AAB /* PearlLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PearlLogger.m; sourceTree = "<group>"; };
 		F7526C9717D0BE5400049AAB /* PearlObjectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PearlObjectUtils.h; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				F7526CC517D0C4D500049AAB /* PearlWSController.m */,
 				F7088CDA17D7298700AA6787 /* PearlWSStrings.h */,
 				F7088CDB17D7298700AA6787 /* PearlWSStrings.m */,
+				F72FE3DF19582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.h */,
+				F72FE3E019582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.m */,
 			);
 			name = WS;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				F7526CC917D0C50B00049AAB /* NSString+PearlNSArrayFormat.m in Sources */,
 				F7088CD017D71C1900AA6787 /* PearlAlert.m in Sources */,
 				F7526D8317D0D91C00049AAB /* PearlInfoPlist.m in Sources */,
+				F72FE3E119582E8F00BA9610 /* AFHTTPRequestOperationManager+Timeout.m in Sources */,
 				F7526CF717D0C6B500049AAB /* PearlConfig.m in Sources */,
 				F7526CA917D0C14400049AAB /* PearlAbstractStrings.m in Sources */,
 				F7088CD217D71C1900AA6787 /* PearlSheet.m in Sources */,

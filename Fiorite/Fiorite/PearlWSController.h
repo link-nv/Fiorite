@@ -146,5 +146,10 @@ __END_DECLS
  */
 - (AFSecurityPolicy *) securityPolicy;
 
+/**
+ * Override the default AFNetworking timeout interval, which is 60s.
+ */
+- (NSTimeInterval)timeoutInterval;
+
 @end
 
