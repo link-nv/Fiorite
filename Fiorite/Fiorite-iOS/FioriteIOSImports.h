@@ -13,3 +13,5 @@
 #import "PearlUIUtils.h"
 #import "UIImage+PearlScaling.h"
 #import "NSString+Email.h"
+#import "PearlImageUtils.h"
+#import "PearlSegueUtils.h"
