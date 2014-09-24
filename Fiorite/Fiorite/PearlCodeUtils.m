@@ -150,7 +150,7 @@ uint64_t PearlSecureRandom() {
     }
     
     realloc( bytes, length );
-    return [NSData dataWithBytesNoCopy:bytes length:length];
+    return [NSData dataWithBytes:bytes length:length];
 }
 
 - (NSString *)encodeURL {

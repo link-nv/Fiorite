@@ -15,11 +15,11 @@
     UIFont *font = self.font;
     CGSize size = self.frame.size;
     
-    for (CGFloat maxSize = self.font.pointSize; maxSize >= self.minimumFontSize; maxSize -= 1.f)
+    for (CGFloat maxSize = self.font.pointSize; maxSize >= 0.4; maxSize -= 1.f)
     {
         font = [font fontWithSize:maxSize];
         CGSize constraintSize = CGSizeMake(size.width, MAXFLOAT);
-        CGSize labelSize = [self.text sizeWithFont:font constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        CGSize labelSize = [self.text sizeWithFont:font constrainedToSize:constraintSize lineBreakMode:NSLineBreakByWordWrapping];
         if(labelSize.height <= size.height)
         {
             self.font = font;

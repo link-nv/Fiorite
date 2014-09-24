@@ -391,8 +391,8 @@ static NSMutableSet *dismissableResponders;
     
     NSUInteger indent = 0;
     for (UIView *view = self; view; view = view.superview) {
-        dbg(PearlString( @"%%%ds - t:%%d, a:%%0.1f, h:%%@, %%@",
-                        indent ), "", view.tag, view.alpha, @(view.hidden), [view debugDescription]);
+        dbg(PearlString( @"%%%lus - t:%%d, a:%%0.1f, h:%%@, %%@",
+                        (unsigned long)indent ), "", view.tag, view.alpha, @(view.hidden), [view debugDescription]);
         indent += 4;
     }
 }
@@ -404,7 +404,7 @@ static NSMutableSet *dismissableResponders;
 
 - (void)printChildHierarchyWithIndent:(NSUInteger)indent {
     
-    dbg(PearlString( @"%%%ds - t:%%d, a:%%0.1f, h:%%@, %%@", indent ), "", self.tag, self.alpha, @(self.hidden), [self debugDescription]);
+    dbg(PearlString( @"%%%lus - t:%%d, a:%%0.1f, h:%%@, %%@", (unsigned long)indent ), "", self.tag, self.alpha, @(self.hidden), [self debugDescription]);
     
     for (UIView *child in self.subviews)
         [child printChildHierarchyWithIndent:indent + 4];
