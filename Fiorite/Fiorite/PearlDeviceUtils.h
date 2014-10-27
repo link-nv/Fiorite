@@ -40,7 +40,10 @@
 + (BOOL)isSimulator;
 
 + (BOOL) isLandscape;
++ (BOOL) is3dot5inch;
 + (BOOL) is4inch;
++ (BOOL) is4dot7inch;
++ (BOOL) is5dot5inch;
 + (BOOL) hasCamera;
 
 /** The scale difference of the device's user interface in comparison to an iPhone UI. */

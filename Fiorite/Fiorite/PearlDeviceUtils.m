@@ -86,10 +86,37 @@
 #endif
 }
 
++ (BOOL) is3dot5inch {
+    
+#if TARGET_OS_IPHONE
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 480.0);
+#else
+    return NO;
+#endif
+}
+
 + (BOOL) is4inch {
     
 #if TARGET_OS_IPHONE
     return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
+#else
+    return NO;
+#endif
+}
+
++ (BOOL) is4dot7inch {
+    
+#if TARGET_OS_IPHONE
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 667.0);
+#else
+    return NO;
+#endif
+}
+
++ (BOOL) is5dot5inch {
+    
+#if TARGET_OS_IPHONE
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 736.0);
 #else
     return NO;
 #endif
@@ -121,6 +148,8 @@
         case UIUserInterfaceIdiomPad:
             return 1024.0f / 480.0f;
         case UIUserInterfaceIdiomPhone:
+            break;
+        case UIUserInterfaceIdiomUnspecified:
             break;
     }
 #endif
