@@ -57,7 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DB9527A873CF40AF900172B9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		83EAABF034F34F37CAE38EA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B38758E5B411770C3512579F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F2B1E050698147DEA8EA5396 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PearlKVO.h"; sourceTree = "<group>"; };
 		F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PearlKVO.m"; sourceTree = "<group>"; };
@@ -156,6 +157,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		138CC5F517A1D00918AA09C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B38758E5B411770C3512579F /* Pods.debug.xcconfig */,
+				83EAABF034F34F37CAE38EA1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F7088C7F17D70FA800AA6787 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +287,7 @@
 				F7C335D617D0A29700D0A7AE /* Supporting Files */,
 				F7C335D217D0A29700D0A7AE /* Frameworks */,
 				F7C335D117D0A29700D0A7AE /* Products */,
-				DB9527A873CF40AF900172B9 /* Pods.xcconfig */,
+				138CC5F517A1D00918AA09C1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,7 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C48A2713459D4875B828A009 /* Check Pods Manifest.lock */ = {
@@ -541,14 +551,14 @@
 		};
 		F7C335F417D0A29800D0A7AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB9527A873CF40AF900172B9 /* Pods.xcconfig */;
+			baseConfigurationReference = B38758E5B411770C3512579F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Fiorite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fiorite/Fiorite-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/AFNetworking\"  \"${PODS_ROOT}/BuildHeaders/JRSwizzle\" \"${PODS_ROOT}/BuildHeaders/Reachability\" \"${PODS_ROOT}/BuildHeaders/TouchJSON\" \"${PODS_ROOT}/BuildHeaders/UIColor-Utilities\"";
 				PODS_HEADER_SEARCH_PATHS = "${PODS_PUBLIC_HEADERS_SEARCH_PATHS}";
 				PODS_PUBLIC_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/AFNetworking\" \"${PODS_ROOT}/Headers/JRSwizzle\" \"${PODS_ROOT}/Headers/Reachability\" \"${PODS_ROOT}/Headers/TouchJSON\" \"${PODS_ROOT}/Headers/UIColor-Utilities\"";
@@ -559,14 +569,14 @@
 		};
 		F7C335F517D0A29800D0A7AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB9527A873CF40AF900172B9 /* Pods.xcconfig */;
+			baseConfigurationReference = 83EAABF034F34F37CAE38EA1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Fiorite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fiorite/Fiorite-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/AFNetworking\"  \"${PODS_ROOT}/BuildHeaders/JRSwizzle\" \"${PODS_ROOT}/BuildHeaders/Reachability\" \"${PODS_ROOT}/BuildHeaders/TouchJSON\" \"${PODS_ROOT}/BuildHeaders/UIColor-Utilities\"";
 				PODS_HEADER_SEARCH_PATHS = "${PODS_PUBLIC_HEADERS_SEARCH_PATHS}";
 				PODS_PUBLIC_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/AFNetworking\" \"${PODS_ROOT}/Headers/JRSwizzle\" \"${PODS_ROOT}/Headers/Reachability\" \"${PODS_ROOT}/Headers/TouchJSON\" \"${PODS_ROOT}/Headers/UIColor-Utilities\"";
