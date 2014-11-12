@@ -21,7 +21,9 @@
 #import <CommonCrypto/CommonHMAC.h>
 #import "PearlImports.h"
 
-static const char CodeUtils_Base64EncodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+#if TARGET_OS_IPHONE
+#import "FioriteIOSImports.h"
+#endif
 
 PearlHash PearlHashFromNSString(NSString *hash) {
     
@@ -92,65 +94,14 @@ uint64_t PearlSecureRandom() {
 
 - (NSData *)decodeBase64 {
     
-    if (![self length])
-        return [NSData data];
-    
-    static char *decodingTable = NULL;
-    if (decodingTable == NULL) {
-        decodingTable = malloc( 256 );
-        if (decodingTable == NULL)
-            return nil;
-        
-        memset(decodingTable, CHAR_MAX, 256);
-        for (char i = 0; i < 64; i++)
-            decodingTable[CodeUtils_Base64EncodingTable[i]] = i;
+#if TARGET_OS_IPHONE
+    if (!IS_IOS7) {
+        // < iOS7 need to use the deprecated and now public methods
+        return [[NSData alloc] initWithBase64Encoding:self];
     }
+#endif
     
-    const char *characters = [self cStringUsingEncoding:NSASCIIStringEncoding];
-    if (characters == NULL)
-        //  Not an ASCII string!
-        return nil;
-    
-    char *bytes = malloc( (([self length] + 3) / 4) * 3 );
-    if (bytes == NULL)
-        return nil;
-    
-    NSUInteger length = 0, i = 0;
-    while (YES) {
-        char buffer[4];
-        short bufferLength;
-        for (bufferLength = 0; bufferLength < 4; i++) {
-            if (characters[i] == '\0')
-                break;
-            if (isspace( characters[i] ) || characters[i] == '=')
-                continue;
-            
-            buffer[bufferLength] = decodingTable[(short)characters[i]];
-            if (buffer[bufferLength++] == CHAR_MAX) {
-                // Illegal character!
-                free( bytes );
-                return nil;
-            }
-        }
-        
-        if (bufferLength == 0)
-            break;
-        if (bufferLength == 1) {
-            //  At least two characters are needed to produce one byte!
-            free( bytes );
-            return nil;
-        }
-        
-        //  Decode the characters in the buffer to bytes.
-        bytes[length++] = (char)(buffer[0] << 2) | (buffer[1] >> 4);
-        if (bufferLength > 2)
-            bytes[length++] = (char)(buffer[1] << 4) | (buffer[2] >> 2);
-        if (bufferLength > 3)
-            bytes[length++] = (char)(buffer[2] << 6) | buffer[3];
-    }
-    
-    realloc( bytes, length );
-    return [NSData dataWithBytes:bytes length:length];
+    return [[NSData alloc] initWithBase64EncodedString:self options:0];
 }
 
 - (NSString *)encodeURL {
@@ -246,34 +197,14 @@ uint64_t PearlSecureRandom() {
 
 - (NSString *)encodeBase64 {
     
-    if ([self length] == 0)
-        return @"";
-    
-    char *characters = malloc( (([self length] + 2) / 3) * 4 );
-    if (characters == NULL)
-        return nil;
-    
-    NSUInteger length = 0, i = 0;
-    while (i < [self length]) {
-        char buffer[3] = { 0, 0, 0 };
-        short bufferLength = 0;
-        while (bufferLength < 3 && i < [self length])
-            buffer[bufferLength++] = ((char *)[self bytes])[i++];
-        
-        //  Encode the bytes in the buffer to four characters, including padding "=" characters if necessary.
-        characters[length++] = CodeUtils_Base64EncodingTable[(buffer[0] & 0xFC) >> 2];
-        characters[length++] = CodeUtils_Base64EncodingTable[((buffer[0] & 0x03) << 4) | ((buffer[1] & 0xF0) >> 4)];
-        if (bufferLength > 1)
-            characters[length++] = CodeUtils_Base64EncodingTable[((buffer[1] & 0x0F) << 2) | ((buffer[2] & 0xC0) >> 6)];
-        else
-            characters[length++] = '=';
-        if (bufferLength > 2)
-            characters[length++] = CodeUtils_Base64EncodingTable[buffer[2] & 0x3F];
-        else
-            characters[length++] = '=';
+#if TARGET_OS_IPHONE
+    if (!IS_IOS7) {
+        // < iOS7 need to use the deprecated and now public methods
+        return [self base64Encoding];
     }
+#endif
     
-    return [[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES];
+    return [self base64EncodedStringWithOptions:0];
 }
 
 - (NSData *)hashWith:(PearlHash)hash {
