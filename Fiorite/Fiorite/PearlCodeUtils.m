@@ -95,7 +95,7 @@ uint64_t PearlSecureRandom() {
 - (NSData *)decodeBase64 {
     
 #if TARGET_OS_IPHONE
-    if (!IS_IOS7) {
+    if (NOT_IOS7) {
         // < iOS7 need to use the deprecated and now public methods
         return [[NSData alloc] initWithBase64Encoding:self];
     }
@@ -198,7 +198,7 @@ uint64_t PearlSecureRandom() {
 - (NSString *)encodeBase64 {
     
 #if TARGET_OS_IPHONE
-    if (!IS_IOS7) {
+    if (NOT_IOS7) {
         // < iOS7 need to use the deprecated and now public methods
         return [self base64Encoding];
     }
