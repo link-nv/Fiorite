@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'AFNetworking', '~> 2.5.2'
-  s.dependency 'Reachability', '~> 3.1.1'
+  s.dependency 'Reachability', '~> 3.2'
   s.dependency 'TouchJSON',    '~> 1.1'
   s.dependency 'JRSwizzle',    '~> 1.0'
   
