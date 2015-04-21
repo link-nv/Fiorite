@@ -97,8 +97,8 @@
 
 - (AFSecurityPolicy *) securityPolicy {
 
-    AFSecurityPolicy *policy = [AFSecurityPolicy defaultPolicy];
-    policy.SSLPinningMode = AFSSLPinningModePublicKey;
+    AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey];
+    [policy setPinnedCertificates:nil];
     return policy;
 }
 
