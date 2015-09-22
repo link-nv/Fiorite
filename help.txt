@@ -1,0 +1,7 @@
+Verify:
+
+pod spec lint --verbose --allow-warnings Fiorite.podspec
+
+Update:
+
+pod trunk push --verbose --allow-warnings Fiorite.podspec
