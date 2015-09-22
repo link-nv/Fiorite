@@ -23,7 +23,7 @@
 #import "PearlStringUtils.h"
 #import "CJSONSerializer.h"
 #import "NSObject+PearlExport.h"
-#import <AFHTTPRequestOperationManager.h>
+#import "AFHTTPRequestOperationManager.h"
 #import "PearlImports.h"
 #import "AFHTTPRequestOperationManager+Timeout.h"
 
