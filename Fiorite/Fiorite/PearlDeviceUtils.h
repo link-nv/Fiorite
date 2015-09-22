@@ -24,9 +24,6 @@
 /** @return A string that very specifically identifies the exact platform.  This is a more detailed version of UIDevice-model. */
 + (NSString *)platform;
 
-/** @return YES when the application binary has been encrypted. */
-+ (BOOL)isAppEncrypted;
-
 /** @return YES when the kernel allows execution of shell code. */
 + (BOOL)isJailbroken;
 
