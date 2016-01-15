@@ -14,4 +14,9 @@
 + (void) popFadeNavigationController:(UINavigationController *)navigationController;
 + (void) popFadeToRootViewController:(UINavigationController *)navigationController;
 
+/*
+ * Replace the root view controller with a fade out fade in animation
+ */
++ (void) fadeOutInReplace:(UIViewController *)viewController forWindow:(UIWindow *)window animationDuration:(NSTimeInterval)duration;
+
 @end

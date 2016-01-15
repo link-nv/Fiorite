@@ -29,4 +29,23 @@
     
 }
 
++ (void) fadeOutInReplace:(UIViewController *)viewController forWindow:(UIWindow *)window animationDuration:(NSTimeInterval)duration {
+    
+    [UIView animateWithDuration:duration
+                     animations:^{
+                         window.rootViewController.view.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished) {
+                         viewController.view.alpha                  = 0.0;
+                         window.rootViewController = viewController;
+                         [UIView animateWithDuration:0.5
+                                          animations:^{
+                                              viewController.view.alpha = 1.0;
+                                          }
+                                          completion:^(BOOL finished2) {
+                                          }];
+                     }];
+
+}
+
 @end
