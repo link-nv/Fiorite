@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Lin-k N.V. All rights reserved.
 //
 
+#import "AFHTTPRequestOperationManager.h"
+
 @interface AFHTTPRequestOperationManager (Timeout)
 
 - (AFHTTPRequestOperation *)GET:(NSString *)URLString

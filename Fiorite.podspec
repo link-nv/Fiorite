@@ -23,9 +23,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'AFNetworking', '~> 2.6.3'
-  s.dependency 'TouchJSON',    '~> 1.1'
-  s.dependency 'JRSwizzle',    '~> 1.0'
+  s.dependency 'AFNetworking', '2.5.2'
+  s.dependency 'TouchJSON',    '1.1'
+  s.dependency 'JRSwizzle',    '1.0'
   
-  s.ios.dependency 'UIColor-Utilities', '~> 1.0.1'
+  s.ios.dependency 'UIColor-Utilities', '1.0.1'
 end

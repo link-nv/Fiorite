@@ -6,6 +6,4 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import <CommonCrypto/CommonCryptor.h>
-    #import "AFHTTPRequestOperationManager.h"
 #endif
