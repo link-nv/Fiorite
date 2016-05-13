@@ -25,7 +25,6 @@
 #import "NSObject+PearlExport.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "PearlImports.h"
-#import "AFHTTPRequestOperationManager+Timeout.h"
 
 #if TARGET_OS_IPHONE
 #import "PearlAlert.h"

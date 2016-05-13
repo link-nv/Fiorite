@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFSecurityPolicy.h"
+#import "AFHTTPRequestOperationManager+Timeout.h"
 
 __BEGIN_DECLS
 typedef enum {
