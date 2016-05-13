@@ -136,6 +136,8 @@
         case UIUserInterfaceIdiomPhone:
             break;
         case UIUserInterfaceIdiomUnspecified:
+        case UIUserInterfaceIdiomTV:
+        case UIUserInterfaceIdiomCarPlay:
             break;
     }
 #endif

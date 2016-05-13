@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B1E050698147DEA8EA5396 /* libPods.a */; };
+		D7012A2C10908F7FCA145135 /* libPods-Fiorite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7DC0D939A76C3AD2537DFD /* libPods-Fiorite.a */; };
 		F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */; };
 		F7088CD017D71C1900AA6787 /* PearlAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CC717D71C1900AA6787 /* PearlAlert.m */; };
 		F7088CD117D71C1900AA6787 /* PearlBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CC917D71C1900AA6787 /* PearlBoxView.m */; };
@@ -57,8 +58,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A7DC0D939A76C3AD2537DFD /* libPods-Fiorite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fiorite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C246C3CB884135E2FBF196C /* Pods-Fiorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fiorite.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Fiorite/Pods-Fiorite.debug.xcconfig"; sourceTree = "<group>"; };
 		83EAABF034F34F37CAE38EA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B38758E5B411770C3512579F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E60ED3E0ADD8B9814EAF58A4 /* Pods-Fiorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fiorite.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Fiorite/Pods-Fiorite.release.xcconfig"; sourceTree = "<group>"; };
 		F2B1E050698147DEA8EA5396 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700C4D417D5F96F00633360 /* NSObject+PearlKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PearlKVO.h"; sourceTree = "<group>"; };
 		F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PearlKVO.m"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			files = (
 				F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */,
 				8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */,
+				D7012A2C10908F7FCA145135 /* libPods-Fiorite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +167,8 @@
 			children = (
 				B38758E5B411770C3512579F /* Pods.debug.xcconfig */,
 				83EAABF034F34F37CAE38EA1 /* Pods.release.xcconfig */,
+				6C246C3CB884135E2FBF196C /* Pods-Fiorite.debug.xcconfig */,
+				E60ED3E0ADD8B9814EAF58A4 /* Pods-Fiorite.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -307,6 +314,7 @@
 				F7088C7D17D70FA800AA6787 /* Cocoa.framework */,
 				F7088C8E17D70FA900AA6787 /* XCTest.framework */,
 				F7088C7F17D70FA800AA6787 /* Other Frameworks */,
+				4A7DC0D939A76C3AD2537DFD /* libPods-Fiorite.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,11 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C335F317D0A29800D0A7AE /* Build configuration list for PBXNativeTarget "Fiorite" */;
 			buildPhases = (
-				C48A2713459D4875B828A009 /* Check Pods Manifest.lock */,
+				C48A2713459D4875B828A009 /* 📦 Check Pods Manifest.lock */,
 				F7C335CC17D0A29700D0A7AE /* Sources */,
 				F7C335CD17D0A29700D0A7AE /* Frameworks */,
 				F7C335CE17D0A29700D0A7AE /* CopyFiles */,
-				11555FA3EECF459380F750A6 /* Copy Pods Resources */,
+				11555FA3EECF459380F750A6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,7 +369,7 @@
 		F7C335C817D0A29700D0A7AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Lin-k N.V.";
 			};
 			buildConfigurationList = F7C335CB17D0A29700D0A7AE /* Build configuration list for PBXProject "Fiorite" */;
@@ -384,29 +392,29 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11555FA3EECF459380F750A6 /* Copy Pods Resources */ = {
+		11555FA3EECF459380F750A6 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Fiorite/Pods-Fiorite-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C48A2713459D4875B828A009 /* Check Pods Manifest.lock */ = {
+		C48A2713459D4875B828A009 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +508,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -551,7 +560,7 @@
 		};
 		F7C335F417D0A29800D0A7AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B38758E5B411770C3512579F /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6C246C3CB884135E2FBF196C /* Pods-Fiorite.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Fiorite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -569,7 +578,7 @@
 		};
 		F7C335F517D0A29800D0A7AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83EAABF034F34F37CAE38EA1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = E60ED3E0ADD8B9814EAF58A4 /* Pods-Fiorite.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Fiorite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

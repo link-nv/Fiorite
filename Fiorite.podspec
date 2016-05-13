@@ -1,16 +1,16 @@
 Pod::Spec.new do |s|
   s.name         = "Fiorite"
-  s.version      = "0.2.0"
+  s.version      = "0.3.0"
   s.summary      = "Components and utilities for iOS, based on the Pearl iOS library."
   s.homepage     = "https://github.com/link-nv/Fiorite"
   s.license      = { :type => 'LGPL v3', :file => 'LICENSE' }
   s.author       = { "Wim Vandenhaute" => "wim.vandenhaute@gmail.com" }
-  s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.2.0" }
+  s.platform     = :ios, '7.0'
+  s.source       = { :git => "https://github.com/link-nv/Fiorite.git", :tag => "0.3.0" }
 
   s.resources    = ["Fiorite/Fiorite/*.lproj"]
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '7.0'
   s.ios.source_files  = 'Fiorite/Fiorite/*.{h,m}', 'Fiorite/Fiorite-iOS/*.{h,m}'
   s.ios.frameworks  = 'Security', 'MobileCoreServices', 'SystemConfiguration'
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'AFNetworking', '~> 2.5.2'
+  s.dependency 'AFNetworking', '~> 2.6.3'
   s.dependency 'TouchJSON',    '~> 1.1'
   s.dependency 'JRSwizzle',    '~> 1.0'
   
