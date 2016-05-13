@@ -136,8 +136,10 @@
         case UIUserInterfaceIdiomPhone:
             break;
         case UIUserInterfaceIdiomUnspecified:
+#ifdef __IPHONE_9_2
         case UIUserInterfaceIdiomTV:
         case UIUserInterfaceIdiomCarPlay:
+#endif
             break;
     }
 #endif

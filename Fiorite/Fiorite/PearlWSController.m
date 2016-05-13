@@ -23,7 +23,6 @@
 #import "PearlStringUtils.h"
 #import "CJSONSerializer.h"
 #import "NSObject+PearlExport.h"
-#import "AFHTTPRequestOperationManager.h"
 #import "PearlImports.h"
 
 #if TARGET_OS_IPHONE
