@@ -10,4 +10,7 @@
 
 @interface PearlFadeSegue : UIStoryboardSegue
 
++ (void) fade:(UIViewController *)vc into:(UINavigationController *)navVC;
++ (void) fade:(UIViewController *)vc into:(UINavigationController *)navVC withDuration:(CFTimeInterval)duration;
+
 @end
