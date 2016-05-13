@@ -1,5 +1,5 @@
 platform :ios, '7.0'
-xcodeproj 'Fiorite/Fiorite.xcodeproj'
+project 'Fiorite/Fiorite.xcodeproj'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target "Fiorite" do

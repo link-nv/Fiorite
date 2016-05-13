@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B1E050698147DEA8EA5396 /* libPods.a */; };
 		D7012A2C10908F7FCA145135 /* libPods-Fiorite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7DC0D939A76C3AD2537DFD /* libPods-Fiorite.a */; };
 		F700C4D617D5F96F00633360 /* NSObject+PearlKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F700C4D517D5F96F00633360 /* NSObject+PearlKVO.m */; };
 		F7088CD017D71C1900AA6787 /* PearlAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7088CC717D71C1900AA6787 /* PearlAlert.m */; };
@@ -154,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C335D417D0A29700D0A7AE /* Foundation.framework in Frameworks */,
-				8C6AE805B24F4193B20B2F7B /* libPods.a in Frameworks */,
 				D7012A2C10908F7FCA145135 /* libPods-Fiorite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
