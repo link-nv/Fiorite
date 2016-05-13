@@ -16,8 +16,6 @@
 //  Copyright, lhunath (Maarten Billemont) 2009. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "AFHTTPRequestOperationManager+Timeout.h"
 
 __BEGIN_DECLS

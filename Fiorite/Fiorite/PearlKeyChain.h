@@ -17,7 +17,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonCryptor.h>
 
 @interface NSString(PearlKeyChain)
 
